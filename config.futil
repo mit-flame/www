@@ -1,0 +1,216 @@
+import "primitives/core.futil";
+
+component main() -> () {
+  cells = {
+      base_url = seq_mem_d1(8,32); 
+      compile_sass = std_reg(1);
+      build_search_index = std_reg(1);
+      highlight_code = std_reg(1);
+  }
+  wires = {
+     compile_sass = 1'd0;
+     build_search_index = 1'd0;
+     highlight_code = 1'd1;
+     group write1 {
+     	   base_url.addr0 = 0;
+	   base_url.write_data = 8'd104; // 'h'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write2 {
+     	   base_url.addr0 = 1;
+	   base_url.write_data = 8'd116; // 't'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write3 {
+     	   base_url.addr0 = 2;
+	   base_url.write_data = 8'd116; // 't'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write4 {
+     	   base_url.addr0 = 3;
+	   base_url.write_data = 8'd112; // 'p'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write5 {
+     	   base_url.addr0 = 6;
+	   base_url.write_data = 8'd115; // 's'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write6 {
+     	   base_url.addr0 = 5;
+	   base_url.write_data = 8'd58; // ':'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write7 {
+     	   base_url.addr0 = 6;
+	   base_url.write_data = 8'd47; // '/'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write8 {
+     	   base_url.addr0 = 7;
+	   base_url.write_data = 8'd47; // '/'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write9 {
+     	   base_url.addr0 = 8;
+	   base_url.write_data = 8'd102; // 'f'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write10 {
+     	   base_url.addr0 = 9;
+	   base_url.write_data = 8'd108; // 'l'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write11 {
+     	   base_url.addr0 = 10;
+	   base_url.write_data = 8'd97; // 'a'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write12 {
+     	   base_url.addr0 = 11;
+	   base_url.write_data = 8'd109; // 'm;
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write13 {
+     	   base_url.addr0 = 12;
+	   base_url.write_data = 8'd101; // 'e'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write14 {
+     	   base_url.addr0 = 13;
+	   base_url.write_data = 8'd46; // '.'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write15 {
+     	   base_url.addr0 = 14;
+	   base_url.write_data = 8'd99; // 'c'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write16 {
+     	   base_url.addr0 = 15;
+	   base_url.write_data = 8'd115; // 's'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write17 {
+     	   base_url.addr0 = 16;
+	   base_url.write_data = 8'd97; // 'a'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write18 {
+     	   base_url.addr0 = 17;
+	   base_url.write_data = 8'd105; // 'i'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write19 {
+     	   base_url.addr0 = 18;
+	   base_url.write_data = 8'd108; // 'l'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write20 {
+     	   base_url.addr0 = 19;
+	   base_url.write_data = 8'd46; // '.'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write21 {
+     	   base_url.addr0 = 20;
+	   base_url.write_data = 8'd109; // 'm'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write22 {
+     	   base_url.addr0 = 21;
+	   base_url.write_data = 8'd105; // 'i'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write23 {
+     	   base_url.addr0 = 22;
+	   base_url.write_data = 8'd116; // 't'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write24 {
+     	   base_url.addr0 = 23;
+	   base_url.write_data = 8'd46; // '.'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write25 {
+     	   base_url.addr0 = 24;
+	   base_url.write_data = 8'd101; // 'e'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write26 {
+     	   base_url.addr0 = 25;
+	   base_url.write_data = 8'd100; // 'd'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write27 {
+     	   base_url.addr0 = 26;
+	   base_url.write_data = 8'd117; // 'u'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+     group write28 {
+     	   base_url.addr0 = 27;
+	   base_url.write_data = 8'd9; // '\0'
+	   base_url.write_en = 1'd1;
+	   base_url.content_en = 1'd1;
+     }
+}
+  control {
+    seq {
+      write0;
+      write1;
+      write2;
+      write3;
+      write4;
+      write5;
+      write6;
+      write7;
+      write8;
+      write9;
+      write10;
+      write11;
+      write12;
+      write13;
+      write14;
+      write15;
+      write16;
+      write17;
+      write18;
+      write19;
+      write20;
+      write21;
+      write22;
+      write23;
+      write24;
+      write25;
+      write26;
+      write27;
+      write28;      
+    } 
+  } 
+}
