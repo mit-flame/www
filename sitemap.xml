@@ -3,4 +3,18 @@
     <url>
         <loc>https://flame.csail.mit.edu/</loc>
     </url>
+    <url>
+        <loc>https://flame.csail.mit.edu/about/</loc>
+    </url>
+    <url>
+        <loc>https://flame.csail.mit.edu/news/</loc>
+    </url>
+    <url>
+        <loc>https://flame.csail.mit.edu/news/faculty-accept/</loc>
+        <lastmod>2024-06-21</lastmod>
+    </url>
+    <url>
+        <loc>https://flame.csail.mit.edu/news/peizo-accept/</loc>
+        <lastmod>2024-06-03</lastmod>
+    </url>
 </urlset>
