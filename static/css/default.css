@@ -147,6 +147,15 @@ blockquote {
     margin: 10px 0;
 }
 
+/* Footer */
+footer {
+    grid-column: 1 / span 2;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #888888;
+}
+
 /* Responsive Layout */
 @media (max-width: 768px) {
     .container {
