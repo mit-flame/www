@@ -116,13 +116,14 @@ p {
 }
 
 .hero h1,
-.hero h3 {
+.hero h3,
+.news-section h2 {
     margin: 0;
     padding: 0;
     line-height: 1;
 }
 
-.hero .highlight {
+.highlight {
     color: #750014;
 }
 
@@ -136,8 +137,8 @@ p {
 /* News Section */
 .news-section {
     grid-column: 2 / span 1;
-    background-color: #eaeaea;
     padding: 20px;
+    padding-top: 0;
 }
 
 blockquote {
@@ -154,6 +155,50 @@ footer {
     text-align: center;
     font-size: 14px;
     color: #888888;
+}
+
+.date {
+    font-weight: 300;
+    text-align: left;
+    color: #8b959e;
+}
+
+.blurb {
+    margin-bottom: 0.8em;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.blurb>.date {
+    vertical-align: top;
+    flex: 1 100%;
+}
+
+.blurb>.description {
+    vertical-align: top;
+    margin-left: 1em;
+    flex: 1 1;
+}
+
+.blurb>.description>.title {
+    vertical-align: top;
+}
+
+.blurb p {
+    display: inline;
+}
+
+a {
+    color: rgb(0, 0, 0, 0.8);
+    text-decoration: none;
+    border-bottom: #750014 0.15em solid;
+}
+
+a:hover,
+a:focus {
+    background: #fbf3f3;
+    transition-property: background;
+    transition-duration: 0.2s;
 }
 
 /* Responsive Layout */
