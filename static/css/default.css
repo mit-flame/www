@@ -1,0 +1,160 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    background-color: #fffff8;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333333;
+    text-rendering: optimizeLegibility;
+    /*hyphens: auto;*/
+    counter-reset: sidenote-counter;
+}
+
+h1,
+h2 {
+    margin-top: 1em;
+    margin-bottom: 0.1em;
+}
+
+h3 {
+    margin-top: 0.5em;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    hyphens: none;
+}
+
+/* Subsubheadings are a crutch. Don't use them. */
+h4,
+h5,
+h6 {
+    color: red;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 1.25;
+    /* letter-spacing: -1px; */
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.35;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+hr {
+    width: 10rem;
+    border: 0;
+    height: 1px;
+    background: #aaa;
+    text-align: left;
+    margin-left: 0
+}
+
+p {
+    margin: 15px 0px 15px 0px;
+    /* max-width: 600px; */
+    text-align: left;
+}
+
+/* Grid Container */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+/* Top Title Bar */
+.hero {
+    grid-column: 1 / span 1;
+    padding: 10px;
+    font-weight: 900;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 85px auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero .logo {
+    grid-column: 1 / span 1;
+    width: 100px;
+    height: 120px;
+    background-size: cover;
+}
+
+.hero .title {
+    margin-top: 0.4em;
+    grid-column: 2 / span auto;
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+.hero h1 {
+    font-weight: 400;
+    font-size: 72px;
+    font-family: 'Bebas Neue';
+    color: #626a73;
+}
+
+.hero h1,
+.hero h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.hero .highlight {
+    color: #750014;
+}
+
+/* Main Section */
+.main-section {
+    grid-column: 1 / span 1;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* News Section */
+.news-section {
+    grid-column: 2 / span 1;
+    background-color: #eaeaea;
+    padding: 20px;
+}
+
+blockquote {
+    background-color: #f9f9f9;
+    border-left: 5px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .news-section {
+        grid-column: 1 / span 1;
+    }
+}

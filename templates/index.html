@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% import "macros.html" as m %}
+
+{% block content %}
+<div class="container">
+<!-- Hero -->
+<div class="hero">
+  <div class="logo" style="background-image: url('/img/flame-logo.png');"></div>
+  <div class="title">
+    <h1> <span class="highlight">FLAME</span> Lab @ MIT</h1>
+    <h3>Foundations of Languages and Machines</h3>
+  </div>
+</div>
+
+
+<!-- Bio -->
+<div class="main-section">
+  <div class="bio">
+    {% set page = get_page(path="about.md") %}
+    {{ page.content | safe }}
+  </div>
+</div>
+
+<div class="news-section">
+<h2>News</h2>
+{% set news = get_section(path="news/_index.md") %}
+{% set items = 5 %}
+{% for post in news.pages | sort(attribute="date") | reverse | slice(end=items) %}
+{{ m::generate_news(post=post) }}
+{% endfor %}
+<div class="more">
+    <a href="/news">
+    All News
+    <i class="fa fa-angle-double-right"></i>
+    </a>
+</div>
+</div>
+
+</div> <!-- end container -->
+
+{% endblock content %}
