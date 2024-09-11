@@ -88,7 +88,7 @@ p {
     font-weight: 900;
 
     display: grid;
-    justify-content: center;
+    /* justify-content: center; */
     grid-template-columns: 85px auto;
     align-items: center;
     gap: 10px;
