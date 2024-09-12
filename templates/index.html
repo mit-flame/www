@@ -19,7 +19,7 @@
 </div>
 
 <div class="side-section">
-<h2 class="highlight">News</h2>
+<h2>News</h2>
 {% set news = get_section(path="news/_index.md") %}
 {% set items = 5 %}
 {% for post in news.pages | sort(attribute="date") | reverse | slice(end=items) %}
@@ -31,5 +31,15 @@
     <i class="fa fa-angle-double-right"></i>
     </a>
 </div>
+
+<div style="padding-top: 25px;"></div>
+
+<div class="toc">
+<h2>Links</h2>
+<ul>
+  <li><a href="prospective/">Prospective Students</a></li>
+</ul>
+</div>
+
 </div>
 {% endblock content %}

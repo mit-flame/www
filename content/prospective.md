@@ -43,12 +43,13 @@ This does not need to be the final project you work on but should be a jumping o
 
 I love hearing what folks at MIT are working on! Drop me [an email][rachit-email], and we'll set up some time to chat.
 
-## Postdocs
+## Postdocs & Visitors
 
-I am generally not accepting postdoc applications.
+I am generally not accepting postdoc or visitor applications.
 However, if you think we are an *exceptionally good* match, please:
-1. Drop me an email with a concise description of your research and what projects you would like to pursue at FLAME.
-2. Ask your advisor to email me with a letter of recommendation.
+* Drop me an email with a concise description of your research and what projects you would like to pursue at FLAME.
+* Ask your advisor to email me with a letter of recommendation.
+
 
 [eecs-app]: https://www.eecs.mit.edu/academics/graduate-programs/admission-process/
 [gaap]: https://oge.mit.edu/community-diversity/prospective-students/graduate-application-assistance-programs-gaap/
