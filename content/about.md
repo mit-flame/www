@@ -9,10 +9,19 @@ We have a strong emphasis on building real tools, getting them used by industria
 
 ## Projects
 
-### Redesigning the RTL Abstraction
-The register transfer level abstraction used by hardware description languages like Verilog is plagued with many problems. How can we do better?
+### Rethinking Hardware Description Languages
+Hardware description languages (HDLs) provide low-level control allowing precise specification of circuits.
+This precision comes at both a productivity and correctness cost; circuits must be defined using low-level abstractions of gates, wires, and clock cycles and require tedious, complex, and expensive tools to be verified correct.
+How can we design new HDLs that provide strong correctness guarantees at compile-time *without* compromising on the efficiency of the circuits?
 
 ### Automatic Hardware Generation
-There has been substantial interest in automatically generating hardware from high-level specifications the existing languages are not very expressive or correct. Can we do better?
+Automatic hardware generation promises rapid creation of hardware designs from high-level descriptions.
+However, existing tools provide limited expressive power, have unpredictable programming models, and are plagued with bugs.
+How can we design new, high-level programming models for hardware generation that can describe classic micro-architectural optimizations (like speculation, out-of-order processing, multi-threading), express a wide variety of computational problems, and generate high-performance and correct circuits?
+
+
+### Large Scale Heterogeneous Systems
+Field Programmable Gate Arrays (FPGAs) have seen wide adoption as plug-and-play accelerators for various domains: networking, machine learning, language runtimes.
+How can we design large-scale FPGA-based systems that can utilize multi-node setups, integrate which existing distributing computing frameworks, and provide a straightforward end-user programming model?
 
 [rachit]: https://rachit.pl
