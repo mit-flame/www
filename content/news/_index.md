@@ -1,5 +1,5 @@
 +++
-title = "List of blog posts"
+title = "News"
 sort_by = "date"
 template = "news.html"
 +++
