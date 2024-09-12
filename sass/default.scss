@@ -33,19 +33,20 @@ body {
 
     font-weight: 500;
     font-family: 'Bebas Neue';
-    font-size: 36px;
 
     line-height: 1.25;
 }
 
 h1 {
     @extend %big-header-style;
-    margin-bottom: 0.4em;
+    font-size: 48px;
+    margin-bottom: 0.3em;
 }
 
 h2 {
     @extend %big-header-style;
-    margin-bottom: 0.2em;
+    font-size: 36px;
+    margin: 0.2em 0;
 }
 
 h3 {
@@ -86,6 +87,7 @@ blockquote {
 
 /* Footer */
 footer {
+    grid-column: 1 / span 2;
     padding: 20px;
     text-align: center;
     font-size: 12px;
