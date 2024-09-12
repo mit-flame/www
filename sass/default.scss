@@ -1,6 +1,20 @@
 @use "sass:color";
 @import "_theme";
 
+$hero-size: 72px;
+
+$h1-size: 48px;
+$h1-weight: 500;
+
+$h2-size: 36px;
+$h2-weight: 500;
+
+$h3-size: 20px;
+$h3-weight: 600;
+
+$body-size: 16px;
+$body-lh: 1.55;
+
 /* CSS Reset */
 * {
     margin: 0;
@@ -15,8 +29,8 @@ body {
     background-color: $background;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: $body-size;
+    line-height: $body-lh;
     color: $font-color;
     text-rendering: optimizeLegibility;
     hyphens: auto;
@@ -30,30 +44,30 @@ body {
 %big-header-style {
     @extend %header-style;
     color: $highlight;
-
-    font-weight: 500;
     font-family: 'Bebas Neue';
-
-    line-height: 1.25;
+    line-height: 1;
 }
 
 h1 {
     @extend %big-header-style;
-    font-size: 48px;
+    font-size: $h1-size;
+    font-weight: $h1-weight;
     margin-bottom: 0.3em;
 }
 
 h2 {
     @extend %big-header-style;
-    font-size: 36px;
+    font-size: $h2-size;
+    font-weight: $h2-weight;
     margin: 0.2em 0;
 }
 
 h3 {
     @extend %header-style;
-    font-size: 20px;
+    font-size: $h3-size;
+    font-weight: $h3-weight;
+
     line-height: 1.5;
-    font-weight: 500;
     margin-top: 0.5em;
     padding-bottom: 0.3em;
 }
@@ -76,6 +90,18 @@ hr {
 
 p {
     text-align: left;
+    color: inherit;
+    margin-top: 0.5em;
+}
+
+ol,
+ul {
+    list-style-position: outside;
+    padding-left: 1em;
+}
+
+li {
+    color: inhert;
 }
 
 blockquote {
@@ -83,6 +109,10 @@ blockquote {
     border-left: 5px solid $highlight;
     padding: 10px;
     margin: 10px 0;
+
+    p {
+        margin: 0;
+    }
 }
 
 /* Footer */
@@ -97,6 +127,10 @@ footer {
 // Utility Classes
 .highlight {
     color: $highlight;
+}
+
+.muted {
+    color: $muted;
 }
 
 /* Grid Container */
@@ -120,7 +154,7 @@ footer {
 }
 
 /* News Section */
-.news-section {
+.side-section {
     grid-column: 2 / span 1;
     padding-top: 0;
 }
@@ -154,7 +188,7 @@ footer {
     }
 
     h1 {
-        font-size: 72px;
+        font-size: $hero-size;
         font-family: 'Bebas Neue';
         color: #626a73;
     }
@@ -163,7 +197,7 @@ footer {
 
 .hero h1,
 .hero h3,
-.news-section h2 {
+.side-section h2 {
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -208,11 +242,14 @@ a {
     border-bottom: $highlight 0.15em solid;
 }
 
+%hover-transition {
+    color: $highlight;
+    transition: color 0.3s;
+}
+
 a:hover,
 a:focus {
-    background: #fbf3f3;
-    transition-property: background;
-    transition-duration: 0.2s;
+    @extend %hover-transition;
 }
 
 .publication {
@@ -232,6 +269,28 @@ a:focus {
     }
 }
 
+.toc {
+    color: $muted;
+
+    h1,
+    h2,
+    h3 {
+        color: $muted;
+    }
+
+
+    a {
+        color: $muted;
+        border-bottom: none;
+    }
+
+    // When the user hovers over a link, transition the color of the link
+    a:hover,
+    a:focus {
+        @extend %hover-transition;
+    }
+}
+
 /* Responsive Layout */
 @media (max-width: 768px) {
     .container {
@@ -239,7 +298,24 @@ a:focus {
         grid-template-rows: auto;
     }
 
-    .news-section {
+    .side-section {
         grid-column: 1 / span 1;
+    }
+
+}
+
+// Hide the logo if the screen is too small
+@media (max-width: 550px) {
+    .hero {
+        grid-template-columns: auto;
+
+        .title {
+            margin-left: 0;
+        }
+
+        .logo {
+            width: 0px;
+            height: 0px;
+        }
     }
 }
