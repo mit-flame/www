@@ -19,20 +19,40 @@ body {
 }
 
 h1,
+h2,
+h3 {
+    hyphens: none;
+}
+
+h1,
 h2 {
     margin-top: 1em;
-    margin-bottom: 0.1em;
 }
 
 h3 {
     margin-top: 0.5em;
 }
 
-h1,
-h2,
+h1 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.25;
+}
+
+h2 {
+    font-weight: 500;
+    color: #750014;
+    font-family: 'Bebas Neue';
+    font-size: 36px;
+    line-height: 1.35;
+}
+
 h3 {
-    font-weight: 300;
-    hyphens: none;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    padding-bottom: 0.3em;
+    padding-top: 0.2em;
 }
 
 /* Subsubheadings are a crutch. Don't use them. */
@@ -40,22 +60,6 @@ h4,
 h5,
 h6 {
     color: red;
-}
-
-h1 {
-    font-size: 36px;
-    line-height: 1.25;
-    /* letter-spacing: -1px; */
-}
-
-h2 {
-    font-size: 24px;
-    line-height: 1.35;
-}
-
-h3 {
-    font-size: 20px;
-    line-height: 1.5;
 }
 
 hr {
@@ -68,8 +72,6 @@ hr {
 }
 
 p {
-    margin: 15px 0px 15px 0px;
-    /* max-width: 600px; */
     text-align: left;
 }
 
@@ -109,7 +111,6 @@ p {
 }
 
 .hero h1 {
-    font-weight: 400;
     font-size: 72px;
     font-family: 'Bebas Neue';
     color: #626a73;
@@ -121,6 +122,7 @@ p {
     margin: 0;
     padding: 0;
     line-height: 1;
+    font-weight: 300;
 }
 
 .highlight {
@@ -130,8 +132,9 @@ p {
 /* Main Section */
 .main-section {
     grid-column: 1 / span 1;
-    background-color: #f2f2f2;
-    padding: 20px;
+    /* background-color: #f2f2f2; */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* News Section */
@@ -143,7 +146,7 @@ p {
 
 blockquote {
     background-color: #f9f9f9;
-    border-left: 5px solid #ccc;
+    border-left: 5px solid #750014;
     padding: 10px;
     margin: 10px 0;
 }
