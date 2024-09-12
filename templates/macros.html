@@ -49,7 +49,7 @@
 {% macro author(name) %}
 
 {%- if name == "Rachit Nigam" -%}
-<span class="publication-highlight">{{ name }}</span>
+<span class="highlight">{{ name }}</span>
 {%- else -%}
 
 {% set_global link = "" %}
@@ -78,15 +78,7 @@
 {# Styling for a publication item #}
 {% macro publication(pub) %}
 <div class="publication">
-  <div class="publication-venue">
-    {% if not pub.extra.publication_short %}
-    <i>Draft</i>
-    {% else %}
-    {{- pub.extra.publication_short -}}
-    &nbsp;
-    {{ pub.date | date(format="’%y") }}
-    {% endif %}
-  </div>
+
   <div class="publication-details">
     <div class="publication-title">
       {% if pub.extra.pdf %}
@@ -99,7 +91,7 @@
     </div>
     <div>
       {% for name in pub.extra.authors %}
-      {{ m::author(name=name) }}{% if not loop.last %}, {% endif %}
+      {{ name }}{% if not loop.last %}, {% endif %}
       {% endfor %}
     </div>
     {% if pub.extra.award %}
@@ -109,16 +101,28 @@
       <b>{{ pub.extra.award }}</b>
     </div>
     {% endif %}
+    <div class="publication-venue">
+      {% if not pub.extra.publication_short %}
+      <i>Draft</i>
+      {% else %}
+      {{- pub.extra.publication_short -}}
+      &nbsp;
+      {{ pub.date | date(format="’%y") }}
+      {% endif %}
+    </div>
+
+    <!--
     <div class="publication-links">
       {% set sorted_links = pub.extra.urls | sort(attribute="name") %}
       {% for link in sorted_links %}
       <span class="publication-link">
         <a class="unstyled-link" href="{{ link.url }}">
-          【&#8239;{{ link.name }}&#8239;】
+          {{ link.name }}
         </a>
       </span>
       {% endfor %}
     </div>
+    -->
   </div>
 </div>
 {% endmacro publication %}

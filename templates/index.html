@@ -4,10 +4,18 @@
 {% block content %}
 <!-- About  -->
 <div class="main-section">
-  <div class="bio">
+  <div>
     {% set page = get_page(path="about.md") %}
     {{ page.content | safe }}
   </div>
+
+  {{ m::anchor_heading(content="Publications") }}
+  {% set news = get_section(path="publication/_index.md") %}
+
+  <!-- Conference Publications -->
+  {% for pub in news.pages | filter(attribute="extra.type", value="conf") | sort(attribute="date") | reverse %}
+  {{ m::publication(pub=pub) }}
+  {% endfor %}
 </div>
 
 <div class="news-section">

@@ -14,3 +14,26 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+author = [
+    { name = "Pedro Henrique Azevedo de Amorim", link = "https://www.cs.cornell.edu/~pamorim/" },
+    { name = "Griffin Berlstein", link = "https://griffinberlste.in/" },
+    { name = "Chris Gyurgyik", link = "https://cgyurgyik.github.io/" },
+    { name = "Alexa VanHattum", link = "https://www.cs.cornell.edu/~avh/" },
+    { name = "James Bornholt", link = "https://www.cs.utexas.edu/~bornholt/" },
+    { name = "Samuel Thomas", link = "https://www.cs.utexas.edu/~sgt/" },
+    { name = "Zhijing Li", link = "https://tissue3.github.io/" },
+    { name = "Ted Bauer", link = "https://tedbauer.github.io/" },
+    { name = "Adrian Sampson", link = "http://adriansampson.net" },
+    { name = "Zhiru Zhang", link = "http://www.csl.cornell.edu/~zhiruz/" },
+    { name = "Arjun Guha", link = "https://ccs.neu.edu/~arjunguha/main/home/" },
+    { name = "Sam Baxter", link = "https://baxtersa.github.io/about/" },
+    { name = "Shriram Krishnamurthi", link = "http://cs.brown.edu/~sk/" },
+    { name = "Joe Gibbs Politz", link = "https://jpolitz.github.io/" },
+    { name = "Jean-Baptiste Jeannin", link = "https://jeannin.github.io/" },
+    { name = "Sachille Atapattu", link = "https://www.csl.cornell.edu/~sachille/" },
+    { name = "Anshuman Mohan", link = "https://www.cs.cornell.edu/~amohan/" },
+    { name = "Andrew Butt", link = "https://andrewb1999.github.io/" },
+    { name = "Caleb Kim", link = "https://calebmkim.github.io/" },
+    { name = "Kartik Chandra", link = "https://cs.stanford.edu/~kach/" },
+    { name = "Jonathan Ragan-Kelley", link = "https://people.csail.mit.edu/jrk/" },
+]
