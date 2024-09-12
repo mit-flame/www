@@ -2,18 +2,7 @@
 {% import "macros.html" as m %}
 
 {% block content %}
-<div class="container">
-<!-- Hero -->
-<div class="hero">
-  <div class="logo" style="background-image: url('/img/flame-logo.png');"></div>
-  <div class="title">
-    <h1> <span class="highlight">FLAME</span> Lab @ MIT</h1>
-    <h3>Foundations of Languages and Machines</h3>
-  </div>
-</div>
-
-
-<!-- Bio -->
+<!-- About  -->
 <div class="main-section">
   <div class="bio">
     {% set page = get_page(path="about.md") %}
@@ -35,7 +24,4 @@
     </a>
 </div>
 </div>
-
-</div> <!-- end container -->
-
 {% endblock content %}

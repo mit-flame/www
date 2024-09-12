@@ -1,3 +1,5 @@
+@import "_theme";
+
 /* CSS Reset */
 * {
     margin: 0;
@@ -9,7 +11,7 @@ body {
     margin: 0 auto;
     max-width: 90%;
 
-    background-color: #fffff8;
+    background-color: $background;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -20,41 +22,38 @@ body {
     counter-reset: sidenote-counter;
 }
 
-h1,
-h2,
-h3 {
+%header-style {
     hyphens: none;
 }
 
-h1,
-h2 {
-    margin-top: 1em;
-}
+%big-header-style {
+    @extend %header-style;
+    color: $highlight;
 
-h3 {
-    margin-top: 0.5em;
-}
-
-h1 {
-    font-weight: 600;
+    font-weight: 500;
+    font-family: 'Bebas Neue';
     font-size: 36px;
+
     line-height: 1.25;
 }
 
+h1 {
+    @extend %big-header-style;
+    margin-bottom: 0.4em;
+}
+
 h2 {
-    font-weight: 500;
-    color: #750014;
-    font-family: 'Bebas Neue';
-    font-size: 36px;
-    line-height: 1.35;
+    @extend %big-header-style;
+    margin-bottom: 0.2em;
 }
 
 h3 {
+    @extend %header-style;
     font-size: 20px;
     line-height: 1.5;
     font-weight: 500;
+    margin-top: 0.2em;
     padding-bottom: 0.3em;
-    padding-top: 0.2em;
 }
 
 /* Subsubheadings are a crutch. Don't use them. */
@@ -77,73 +76,6 @@ p {
     text-align: left;
 }
 
-/* Grid Container */
-.container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
-}
-
-/* Top Title Bar */
-.hero {
-    grid-column: 1 / span 2;
-    padding: 10px;
-    font-weight: 900;
-
-    display: grid;
-    /* justify-content: center; */
-    grid-template-columns: 85px auto;
-    align-items: center;
-    gap: 10px;
-}
-
-.hero .logo {
-    grid-column: 1 / span 1;
-    width: 100px;
-    height: 120px;
-    background-size: cover;
-}
-
-.hero .title {
-    margin-top: 0.4em;
-    grid-column: 2 / span auto;
-    font-size: 2rem;
-    margin-left: 10px;
-}
-
-.hero h1 {
-    font-size: 72px;
-    font-family: 'Bebas Neue';
-    color: #626a73;
-}
-
-.hero h1,
-.hero h3,
-.news-section h2 {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: 300;
-}
-
-.highlight {
-    color: #750014;
-}
-
-/* Main Section */
-.main-section {
-    grid-column: 1 / span 1;
-    /* background-color: #f2f2f2; */
-    padding-right: 20px;
-}
-
-/* News Section */
-.news-section {
-    grid-column: 2 / span 1;
-    padding-top: 0;
-}
-
 blockquote {
     background-color: #f9f9f9;
     border-left: 5px solid #750014;
@@ -158,6 +90,84 @@ footer {
     text-align: center;
     font-size: 14px;
     color: #888888;
+}
+
+// Utility Classes
+.highlight {
+    color: $highlight;
+}
+
+/* Grid Container */
+.container {
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+/* Main Section */
+.main-section {
+    grid-column: 1 / span 1;
+    padding-right: 20px;
+
+    // h2 are used to separate sections
+    h2 {
+        padding-top: 0.5em;
+    }
+}
+
+/* News Section */
+.news-section {
+    grid-column: 2 / span 1;
+    padding-top: 0;
+}
+
+
+/* Top Title Bar */
+.hero {
+    grid-column: 1 / span 2;
+    padding: 10px 0;
+    font-weight: 900;
+    justify-content: center;
+
+    display: grid;
+    grid-template-columns: 85px auto;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 10px;
+
+    .logo {
+        grid-column: 1 / span 1;
+        width: 100px;
+        height: 120px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .title {
+        margin-top: 0.4em;
+        grid-column: 2 / span auto;
+        font-size: 2rem;
+        margin-left: 10px;
+    }
+
+    h1 {
+        font-size: 72px;
+        font-family: 'Bebas Neue';
+        color: #626a73;
+    }
+}
+
+
+.hero h1,
+.hero h3,
+.news-section h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 300;
 }
 
 .date {
@@ -194,7 +204,7 @@ footer {
 a {
     color: rgb(0, 0, 0, 0.8);
     text-decoration: none;
-    border-bottom: #750014 0.15em solid;
+    border-bottom: $highlight 0.15em solid;
 }
 
 a:hover,
@@ -206,9 +216,6 @@ a:focus {
 
 /* Responsive Layout */
 @media (max-width: 768px) {
-    body {}
-
-
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
