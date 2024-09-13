@@ -25,4 +25,4 @@ Field Programmable Gate Arrays (FPGAs) have seen wide adoption as plug-and-play 
 How can we design large-scale FPGA-based systems that can utilize multi-node setups, integrate which existing distributing computing frameworks, and provide a straightforward end-user programming model?
 
 [rachit]: https://rachit.pl
-[prospective]: /prospective
+[prospective]: @/lab/prospective.md

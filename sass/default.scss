@@ -79,6 +79,33 @@ h6 {
     color: red;
 }
 
+h1 a,
+h2 a,
+h3 a {
+    border-bottom: none;
+}
+
+h1:target,
+h2:target,
+h3:target {
+
+    // Change the color of the heading when it is a target
+    a {
+        color: $highlight;
+    }
+
+    // If the heading is a target, add >> before it
+    ::before {
+        content: "»";
+        display: inline-block;
+        margin-inline-start: -20px;
+        width: 20px;
+        color: $highlight;
+    }
+}
+
+// Body elements
+
 hr {
     width: 10rem;
     border: 0;

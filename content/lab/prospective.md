@@ -1,6 +1,5 @@
 +++
 title = "Prospective Students"
-template = "single-page.html"
 +++
 
 Thanks for your interest! Please read the instructions carefully before reaching out:
