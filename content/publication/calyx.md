@@ -19,7 +19,7 @@ equal_authors = [true, true]
 publication = "Conference on Architectural Support for Programming Languages and Operating Systems"
 publication_short = "ASPLOS"
 
-pdf = "/files/pubs/calyx.pdf"
+pdf = "https://rachit.pl/files/pubs/calyx.pdf"
 urls = [
   { name = "Website", url = "https://calyxir.org" },
   { name = "Demo", url = "https://play.calyxir.org" },
