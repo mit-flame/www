@@ -14,6 +14,7 @@ $h3-weight: 600;
 
 $body-size: 16px;
 $body-lh: 1.55;
+$body-weight: 400;
 
 /* CSS Reset */
 * {
@@ -28,7 +29,7 @@ body {
 
     background-color: $background;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: $body-weight;
     font-size: $body-size;
     line-height: $body-lh;
     color: $font-color;
@@ -186,25 +187,6 @@ footer {
     padding-top: 0;
 }
 
-
-.nav {
-    font-weight: 900;
-
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
-    align-items: center;
-
-    .hero {
-        grid-column: 1 / span 1;
-    }
-
-    .links {
-        padding-top: 10px;
-        grid-column: 2 / span 1;
-    }
-}
 
 /* Top Title Bar */
 .hero {
