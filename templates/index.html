@@ -38,6 +38,9 @@
 <h2>Lab</h2>
 {% set lab_pages = get_section(path="lab/_index.md") %}
 <ul>
+  <!-- <li>
+  <a href="https://github.com/mit-flame" target="_blank"><i class="fab fa-github"></i> Github</a>
+  </li> -->
   {% for page in lab_pages.pages %}
   <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
   {% endfor %}

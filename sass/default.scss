@@ -187,10 +187,28 @@ footer {
 }
 
 
+.nav {
+    font-weight: 900;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    align-items: center;
+
+    .hero {
+        grid-column: 1 / span 1;
+    }
+
+    .links {
+        padding-top: 10px;
+        grid-column: 2 / span 1;
+    }
+}
+
 /* Top Title Bar */
 .hero {
     padding: 10px 0;
-    font-weight: 900;
 
     display: grid;
     grid-template-columns: 85px auto;
@@ -217,7 +235,7 @@ footer {
     h1 {
         font-size: $hero-size;
         font-family: 'Bebas Neue';
-        color: #626a73;
+        color: $hero-color;
     }
 
     // Remove hover styling from the title
@@ -269,14 +287,13 @@ footer {
 }
 
 a {
-    color: $font-color;
+    color: $highlight;
     text-decoration: none;
-    border-bottom: $highlight 0.15em solid;
 }
 
 %hover-transition {
-    color: $highlight;
-    transition: color 0.3s;
+    color: $secondary;
+    transition: color 0.15s;
 }
 
 a:hover,
@@ -298,28 +315,6 @@ a:focus {
 
     a {
         border-bottom: none;
-    }
-}
-
-.toc {
-    color: $muted;
-
-    h1,
-    h2,
-    h3 {
-        color: $muted;
-    }
-
-
-    a {
-        color: $muted;
-        border-bottom: none;
-    }
-
-    // When the user hovers over a link, transition the color of the link
-    a:hover,
-    a:focus {
-        @extend %hover-transition;
     }
 }
 
