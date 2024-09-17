@@ -44,7 +44,7 @@ body {
 
 %big-header-style {
     @extend %header-style;
-    color: $highlight;
+    color: $hero-color;
     font-family: 'Bebas Neue';
     line-height: 1;
 }
