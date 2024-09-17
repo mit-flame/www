@@ -3,7 +3,7 @@ template = "index.html"
 +++
 
 The Foundations of Languages and Machines Lab at MIT is led by [Rachit Nigam][rachit]. We build new programming languages, compilers, and tools to design fast hardware accurately and efficiently.
-We have a strong emphasis on building real tools, getting them used by industrial collaborators, and engaging with the process of building correct and high-performance hardware ourselves.
+We have a strong emphasis on building real tools, [getting them used][calyx-dialect] by industrial collaborators, and engaging with the process of building correct and high-performance hardware ourselves.
 
 > **We are looking for new students to join our lab starting in Fall '25!** Please review the [specific instructions][prospective] before contacting us.
 
@@ -27,3 +27,4 @@ How can we design large-scale FPGA-based systems that can utilize multi-node set
 [prospective]: @/lab/prospective.md
 [filament]: https://filamentHDL.com
 [calyx]: https://calyxir.org
+[calyx-dialect]: https://circt.llvm.org/docs/Dialects/Calyx/
