@@ -31,7 +31,7 @@ Please apply to the MIT graduate admissions process and list me as a reader for 
 
 ### UROPs
 
-Please drop me [an email][rachit-email] using your MIT address and tell me what got you excited about research! If you're a junior or senior student, please describe a research paper you've read and why you think I would a good match for you.
+Please drop me [an email][rachit-email] using your MIT address and tell me what got you excited about research! If you're a junior or senior student, please describe a research paper you've read and why you think I would be a good match for you.
 
 ### M.Eng
 
