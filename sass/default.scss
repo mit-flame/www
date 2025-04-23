@@ -190,7 +190,7 @@ footer {
 
 /* Top Title Bar */
 .hero {
-    padding: 10px 0;
+    padding-top: 30px;
 
     display: grid;
     grid-template-columns: 85px auto;
@@ -234,6 +234,33 @@ footer {
     padding: 0;
     line-height: 1;
     font-weight: 300;
+}
+
+.people {
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    grid-template-rows: auto;
+    row-gap: 1em;
+
+    .person {
+        text-align: center;
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 5px;
+        }
+
+        /* Image is missing */
+        .dummy {
+            opacity: 0.45
+        }
+
+        .role {
+            color: $muted;
+            font-weight: bold;
+        }
+    }
 }
 
 // Date styling

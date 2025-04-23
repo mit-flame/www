@@ -1,15 +1,5 @@
-+++
-template = "index.html"
-+++
-
-The Foundations of Languages and Machines Lab at MIT is led by [Rachit Nigam][rachit].
-We are building new programming languages, compilers, and tools to design and use specialized hardware.
-We have a strong emphasis on [building][filament] [artifacts][calyx] and [getting them used by industrial collaborators][calyx-dialect].
-
-> If you are interested in joining the lab, please review the [specific instructions][prospective] before contacting us.
-
-
-## Themes
+---
+---
 
 ### [Rethinking Hardware Description Languages][filament]
 Hardware description languages (HDLs) provide low-level control, enabling precise specification of circuits.
@@ -31,3 +21,4 @@ How can we design large-scale FPGA-based systems that can utilize multi-node set
 [calyx]: https://calyxir.org
 [calyx-dialect]: https://circt.llvm.org/docs/Dialects/Calyx/
 [elam]: https://elam.day
+
