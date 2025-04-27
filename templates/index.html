@@ -11,27 +11,10 @@
 
   <h2>People</h2>
   {% set people = load_data(path="content/people.yml", format="yaml") %}
-
   <div class="people">
     {% for name, info in people %}
-    <div class="person">
-      {% if info.img %}
-      <img src="img/{{info.img}}" height="100px"/>
-      {% else %}
-      <img class="dummy" src="img/flame-logo.png" height="100px"/>
-      {% endif %}
-      <div>
-        <b>
-        {% if info.link %}
-        <a href="{{ info.link }}"}>{{ name }}</a>
-        {% else %}
-        {{ name }}
-        {% endif %}
-        </b>
-      </div>
-      <div class="role">{{ info.role  }}</div>
-    </div>
-  {% endfor %}
+      {{ m::person(name=name, info=info) }}
+    {% endfor %}
   </div>
 
   {{ m::anchor_heading(content="Publications") }}

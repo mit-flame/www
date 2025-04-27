@@ -5,16 +5,6 @@
 </h{{size}}>
 {% endmacro anchor_heading %}
 
-{# Contact list item #}
-{% macro contact(classes, link) %}
-
-<a class="unstyled-link" itemprop="sameAs" href="{{ link }}" target="_blank" rel="noopener">
-  <i class="{{ classes }} contact-link-item big-icon"></i>
-</a>
-
-{% endmacro contact %}
-
-
 {# Styling for Posts #}
 {% macro generate_post(post) %}
 <div class="blurb">
@@ -34,7 +24,6 @@
 </div>
 {% endmacro post %}
 
-
 {# Styling for News items #}
 {% macro generate_news(post) %}
 <div class="blurb">
@@ -45,84 +34,58 @@
 </div>
 {% endmacro post %}
 
-{# Styling for authors in publication list #}
-{% macro author(name) %}
-
-{%- if name == "Rachit Nigam" -%}
-<span class="highlight">{{ name }}</span>
-{%- else -%}
-
-{% set_global link = "" %}
-{% for author in config.extra.author %}
-{% if author.name == name %}
-{% set_global link = author.link %}
-{% endif %}
-{% endfor %}
-
-<span class="publication-author">
-  {%- if link != "" -%}
-  <!-- Link in author website if present -->
-  <a href="{{ link }}">
-    {%- endif -%}
-    {{ name }}
-    {%- if link != "" -%}
-  </a>
-  {%- endif -%}
-</span>
-
-{%- endif -%}
-
-{% endmacro author %}
-
-
 {# Styling for a publication item #}
 {% macro publication(pub) %}
 <div class="publication">
-
-  <div class="publication-details">
-    <div class="publication-title">
+  <span class="title">
+    {% if pub.extra.pdf %}
+    <a href={{ pub.extra.pdf }}>
+      {% endif %}
+      {{ pub.title | safe }}
       {% if pub.extra.pdf %}
-      <a href={{ pub.extra.pdf }}>
-        {% endif %}
-        {{ pub.title | safe }}
-        {% if pub.extra.pdf %}
-      </a>
-      {% endif %}
-    </div>
-    <div>
-      {% for name in pub.extra.authors %}
-      {{ name }}{% if not loop.last %}, {% endif %}
-      {% endfor %}
-    </div>
-    {% if pub.extra.award %}
-    <!-- Award -->
-    <div>
-      <i class="fa fa-trophy"></i>
-      <b>{{ pub.extra.award }}</b>
-    </div>
+    </a>
     {% endif %}
-    <div class="publication-venue">
-      {% if not pub.extra.publication_short %}
-      <i>Draft</i>
-      {% else %}
-      {{- pub.extra.publication_short -}}
-      &nbsp;
-      {{ pub.date | date(format="’%y") }}
-      {% endif %}
-    </div>
-
-    <!--
-    <div class="publication-links">
-      {% set sorted_links = pub.extra.urls | sort(attribute="name") %}
-      {% for link in sorted_links %}
-      <span class="publication-link">
-        <a class="unstyled-link" href="{{ link.url }}">
-          {{ link.name }}
-        </a>
-      </span>
-      {% endfor %}
-    </div>
-    -->
+  </span>
+  <span class="venue">
+    &bull;
+    {% if not pub.extra.publication_short %}
+    <i>Draft</i>
+    {% else %}
+    {{- pub.extra.publication_short -}}&nbsp;{{ pub.date | date(format="’%y") }}
+    {% endif %}
+  </span>
+  <div class="authors">
+    {% for name in pub.extra.authors %}
+    {{ name }}{% if not loop.last %}, {% endif %}
+    {% endfor %}
   </div>
+  <!-- Award -->
+  {% if pub.extra.award %}
+  <div class="award">
+    <i class="fa fa-trophy"></i>
+    <b>{{ pub.extra.award }}</b>
+  </div>
+  {% endif %}
 </div>
 {% endmacro publication %}
+
+{% macro person(name, info) %}
+<div class="person">
+  {% if info.img %}
+  <img src="img/{{info.img}}" height="100px"/>
+  {% else %}
+  <img class="dummy" src="img/flame-logo.png" height="100px"/>
+  {% endif %}
+
+  <div class="name">
+    <b>
+    {% if info.link %}
+    <a href="{{ info.link }}"}>{{ name }}</a>
+    {% else %}
+    {{ name }}
+    {% endif %}
+    </b>
+  </div>
+  <div class="role">{{ info.role  }}</div>
+</div>
+{% endmacro person %}
