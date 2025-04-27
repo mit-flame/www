@@ -54,74 +54,87 @@
 <div class="main-section">
   <div class="about">
     
-    <p>The Foundations of Languages and Machines Lab at MIT is led by <a href="https://rachit.pl">Rachit Nigam</a>.
-We are building new programming languages, compilers, and tools to design and use specialized hardware.
-We have a strong emphasis on <a href="https://filamentHDL.com">building</a> <a href="https://calyxir.org">artifacts</a> and <a href="https://circt.llvm.org/docs/Dialects/Calyx/">getting them used by industrial collaborators</a>.</p>
+    <p>The goal of the FLAME lab is to design principled abstractions across the programming systems stack
+(languages, compilers, architectures) to enable the efficient design and use of specialized hardware.</p>
 <blockquote>
 <p>If you are interested in joining the lab, please review the <a href="https://flame.csail.mit.edu/lab/prospective/">specific instructions</a> before contacting us.</p>
 </blockquote>
-<h2 id="themes">Themes</h2>
-<h3 id="rethinking-hardware-description-languages"><a href="https://filamentHDL.com">Rethinking Hardware Description Languages</a></h3>
-<p>Hardware description languages (HDLs) provide low-level control, enabling precise specification of circuits.
-This precision comes at both a productivity and correctness cost; circuits must be defined using low-level abstractions of gates, wires, and clock cycles and require tedious, complex, and expensive tools to be verified correct.
-How can we design new HDLs that offer robust correctness guarantees at compile-time <em>without</em> sacrificing circuit efficiency?</p>
-<h3 id="automatic-hardware-generation"><a href="https://calyxir.org">Automatic Hardware Generation</a></h3>
-<p>Automatic hardware generation promises rapid creation of hardware designs from high-level descriptions.
-However, existing tools provide limited expressive power, have unpredictable programming models, and are plagued with bugs.
-How can we design new, high-level programming models for hardware generation that can describe classic micro-architectural optimizations (like speculation, out-of-order processing, multi-threading), express a wide variety of computational problems, and generate high-performance and correct circuits?</p>
-<h3 id="large-scale-heterogeneous-systems">Large Scale Heterogeneous Systems</h3>
-<p>Field Programmable Gate Arrays (FPGAs) have gained significant popularity as plug-and-play accelerators in various domains, including networking, machine learning, and language runtimes.
-How can we design large-scale FPGA-based systems that can utilize multi-node setups, integrate with existing distributing computing frameworks, and provide a straightforward end-user programming model?</p>
+<h2 id="directions">Directions</h2>
+<h3 id="computer-architecture">Computer Architecture</h3>
+<p>A staggering number of new hardware accelerators have been developed to combat the end of scaling.
+However, each accelerator is a unique snowflake with its own design principles, implementation methodology, and
+software stack.
+<em>Can we bring order to this heterogeneity by extracting flexible and composable ideas for architectural design?</em></p>
+<h3 id="programming-languages">Programming Languages</h3>
+<p>Riding on the wave of physical and architectural scaling, programming languages have focused on gluttonous
+abstraction to enable large-scale design.
+With the end of scaling, languages need to work in tandem with compilers and architectures to carefully expose
+low-level control.
+<em>Can we design new programming languages that enable low-level control without compromising on modular abstraction?</em></p>
+<h3 id="compilers">Compilers</h3>
+<p>The clear abstraction boundary between hardware and software provided by traditional processors is lost in the realm of
+accelerators.
+While this boundary has enabled the principled study and design of software compilers, its absence means that accelerator
+compilation only has point solutions.
+<em>How can we scalable and automated compilers for accelerator design and use?</em></p>
 
   </div>
 
   <h2>People</h2>
   
-
   <div class="people">
     
-    <div class="person">
       
-      <img src="img/rnigam.png" height="100px"/>
-      
-      <div>
-        <b>
-        
-        <a href="https:&#x2F;&#x2F;rachitnigam.com"}>Rachit Nigam</a>
-        
-        </b>
-      </div>
-      <div class="role">Faculty</div>
-    </div>
+<div class="person">
   
-    <div class="person">
-      
-      <img src="img/elamdf.png" height="100px"/>
-      
-      <div>
-        <b>
-        
-        <a href="https:&#x2F;&#x2F;elam.day"}>Elam Day-Friedland</a>
-        
-        </b>
-      </div>
-      <div class="role">PhD</div>
-    </div>
+  <img src="img/rnigam.png" height="100px"/>
   
-    <div class="person">
+
+  <div class="name">
+    <b>
+    
+    <a href="https:&#x2F;&#x2F;rachitnigam.com"}>Rachit Nigam</a>
+    
+    </b>
+  </div>
+  <div class="role">Faculty</div>
+</div>
+
+    
       
-      <img class="dummy" src="img/flame-logo.png" height="100px"/>
-      
-      <div>
-        <b>
-        
-        Ayana Alemayehu
-        
-        </b>
-      </div>
-      <div class="role">M.Eng.</div>
-    </div>
+<div class="person">
   
+  <img src="img/elamdf.png" height="100px"/>
+  
+
+  <div class="name">
+    <b>
+    
+    <a href="https:&#x2F;&#x2F;elam.day"}>Elam Day-Friedland</a>
+    
+    </b>
+  </div>
+  <div class="role">PhD</div>
+</div>
+
+    
+      
+<div class="person">
+  
+  <img class="dummy" src="img/flame-logo.png" height="100px"/>
+  
+
+  <div class="name">
+    <b>
+    
+    Ayana Alemayehu
+    
+    </b>
+  </div>
+  <div class="role">M.Eng.</div>
+</div>
+
+    
   </div>
 
   
@@ -135,369 +148,212 @@ How can we design large-scale FPGA-based systems that can utilize multi-node set
   
   
 <div class="publication">
-
-  <div class="publication-details">
-    <div class="publication-title">
-      
-      <a href=https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2312.16300>
-        
-        Unifying Static and Dynamic Intermediate Languages for Accelerator Generators
-        
-      </a>
-      
-    </div>
-    <div>
-      
-      Caleb Kim, 
-      
-      Pai Li, 
-      
-      Anshuman Mohan, 
-      
-      Andrew Butt, 
-      
-      Adrian Sampson, 
-      
-      Rachit Nigam
-      
-    </div>
+  <span class="title">
     
-    <div class="publication-venue">
-      OOPSLA&nbsp;
-      ’24
+    <a href=https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2312.16300>
       
-    </div>
-
-    <!--
-    <div class="publication-links">
+      Unifying Static and Dynamic Intermediate Languages for Accelerator Generators
       
-      
-    </div>
-    -->
+    </a>
+    
+  </span>
+  <span class="venue">
+    &bull;
+    OOPSLA&nbsp;’24
+    
+  </span>
+  <div class="authors">
+    
+    Caleb Kim, 
+    
+    Pai Li, 
+    
+    Anshuman Mohan, 
+    
+    Andrew Butt, 
+    
+    Adrian Sampson, 
+    
+    Rachit Nigam
+    
   </div>
+  <!-- Award -->
+  
 </div>
 
   
   
 <div class="publication">
-
-  <div class="publication-details">
-    <div class="publication-title">
-      
-      <a href=https:&#x2F;&#x2F;rachit.pl&#x2F;files&#x2F;pubs&#x2F;filament.pdf>
-        
-        Modular Hardware Design with Timeline Types
-        
-      </a>
-      
-    </div>
-    <div>
-      
-      Rachit Nigam, 
-      
-      Pedro Henrique Azevedo de Amorim, 
-      
-      Adrian Sampson
-      
-    </div>
+  <span class="title">
     
-    <div class="publication-venue">
-      PLDI&nbsp;
-      ’23
+    <a href=https:&#x2F;&#x2F;rachit.pl&#x2F;files&#x2F;pubs&#x2F;filament.pdf>
       
-    </div>
-
-    <!--
-    <div class="publication-links">
+      Modular Hardware Design with Timeline Types
       
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;github.com&#x2F;cucapra&#x2F;filament">
-          Code
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;www.youtube.com&#x2F;live&#x2F;F3z39M0gdJU?si=rSmWZBUFneABrAFu&amp;t=1060">
-          Talk
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;filamenthdl.com">
-          Website
-        </a>
-      </span>
-      
-    </div>
-    -->
+    </a>
+    
+  </span>
+  <span class="venue">
+    &bull;
+    PLDI&nbsp;’23
+    
+  </span>
+  <div class="authors">
+    
+    Rachit Nigam, 
+    
+    Pedro Henrique Azevedo de Amorim, 
+    
+    Adrian Sampson
+    
   </div>
+  <!-- Award -->
+  
 </div>
 
   
   
 <div class="publication">
-
-  <div class="publication-details">
-    <div class="publication-title">
-      
-      <a href=https:&#x2F;&#x2F;griffinberlste.in&#x2F;pdf&#x2F;cidr.pdf>
-        
-        Stepwise Debugging for Hardware Accelerators
-        
-      </a>
-      
-    </div>
-    <div>
-      
-      Griffin Berlstein, 
-      
-      Rachit Nigam, 
-      
-      Chris Gyurgyik, 
-      
-      Adrian Sampson
-      
-    </div>
+  <span class="title">
     
-    <!-- Award -->
-    <div>
-      <i class="fa fa-trophy"></i>
-      <b>Distinguished Artifact Award</b>
-    </div>
+    <a href=https:&#x2F;&#x2F;griffinberlste.in&#x2F;pdf&#x2F;cidr.pdf>
+      
+      Stepwise Debugging for Hardware Accelerators
+      
+    </a>
     
-    <div class="publication-venue">
-      ASPLOS&nbsp;
-      ’23
-      
-    </div>
-
-    <!--
-    <div class="publication-links">
-      
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;docs.calyxir.org&#x2F;interpreter.html">
-          Website
-        </a>
-      </span>
-      
-    </div>
-    -->
+  </span>
+  <span class="venue">
+    &bull;
+    ASPLOS&nbsp;’23
+    
+  </span>
+  <div class="authors">
+    
+    Griffin Berlstein, 
+    
+    Rachit Nigam, 
+    
+    Chris Gyurgyik, 
+    
+    Adrian Sampson
+    
   </div>
+  <!-- Award -->
+  
+  <div class="award">
+    <i class="fa fa-trophy"></i>
+    <b>Distinguished Artifact Award</b>
+  </div>
+  
 </div>
 
   
   
 <div class="publication">
-
-  <div class="publication-details">
-    <div class="publication-title">
-      
-      <a href=https:&#x2F;&#x2F;rachit.pl&#x2F;files&#x2F;pubs&#x2F;calyx.pdf>
-        
-        A Compiler Infrastructure for Accelerator Generators
-        
-      </a>
-      
-    </div>
-    <div>
-      
-      Rachit Nigam, 
-      
-      Samuel Thomas, 
-      
-      Zhijing Li, 
-      
-      Adrian Sampson
-      
-    </div>
+  <span class="title">
     
-    <div class="publication-venue">
-      ASPLOS&nbsp;
-      ’21
+    <a href=https:&#x2F;&#x2F;rachit.pl&#x2F;files&#x2F;pubs&#x2F;calyx.pdf>
       
-    </div>
-
-    <!--
-    <div class="publication-links">
+      A Compiler Infrastructure for Accelerator Generators
       
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;github.com&#x2F;cucapra&#x2F;calyx">
-          Code
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;play.calyxir.org">
-          Demo
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;youtu.be&#x2F;MElzn-KV5zw">
-          Short Talk
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="&#x2F;files&#x2F;slides&#x2F;calyx.pdf">
-          Slides
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;calyxir.org">
-          Website
-        </a>
-      </span>
-      
-    </div>
-    -->
+    </a>
+    
+  </span>
+  <span class="venue">
+    &bull;
+    ASPLOS&nbsp;’21
+    
+  </span>
+  <div class="authors">
+    
+    Rachit Nigam, 
+    
+    Samuel Thomas, 
+    
+    Zhijing Li, 
+    
+    Adrian Sampson
+    
   </div>
+  <!-- Award -->
+  
 </div>
 
   
   
 <div class="publication">
-
-  <div class="publication-details">
-    <div class="publication-title">
-      
-      <a href=https:&#x2F;&#x2F;www.cs.cornell.edu&#x2F;~avh&#x2F;diospyros-asplos-2021-preprint.pdf>
-        
-        Vectorization for Digital Signal Processors via Equality Saturation
-        
-      </a>
-      
-    </div>
-    <div>
-      
-      Alexa VanHattum, 
-      
-      Rachit Nigam, 
-      
-      Vincent Lee, 
-      
-      James Bornholt, 
-      
-      Adrian Sampson
-      
-    </div>
+  <span class="title">
     
-    <div class="publication-venue">
-      ASPLOS&nbsp;
-      ’21
+    <a href=https:&#x2F;&#x2F;www.cs.cornell.edu&#x2F;~avh&#x2F;diospyros-asplos-2021-preprint.pdf>
       
-    </div>
-
-    <!--
-    <div class="publication-links">
+      Vectorization for Digital Signal Processors via Equality Saturation
       
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;github.com&#x2F;cucapra&#x2F;diospyros">
-          Code
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=RvMI4prTqHY">
-          Full Talk
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=pGHjvPLrmRc">
-          Short Talk
-        </a>
-      </span>
-      
-    </div>
-    -->
+    </a>
+    
+  </span>
+  <span class="venue">
+    &bull;
+    ASPLOS&nbsp;’21
+    
+  </span>
+  <div class="authors">
+    
+    Alexa VanHattum, 
+    
+    Rachit Nigam, 
+    
+    Vincent Lee, 
+    
+    James Bornholt, 
+    
+    Adrian Sampson
+    
   </div>
+  <!-- Award -->
+  
 </div>
 
   
   
 <div class="publication">
-
-  <div class="publication-details">
-    <div class="publication-title">
-      
-      <a href=https:&#x2F;&#x2F;rachit.pl&#x2F;files&#x2F;pubs&#x2F;dahlia.pdf>
-        
-        Predictable Accelerator Design with Time-Sensitive Affine Types
-        
-      </a>
-      
-    </div>
-    <div>
-      
-      Rachit Nigam, 
-      
-      Sachille Atapattu, 
-      
-      Samuel Thomas, 
-      
-      Zhijing Li, 
-      
-      Ted Bauer, 
-      
-      Yuwei Ye, 
-      
-      Apurva Koti, 
-      
-      Adrian Sampson, 
-      
-      Zhiru Zhang
-      
-    </div>
+  <span class="title">
     
-    <div class="publication-venue">
-      PLDI&nbsp;
-      ’20
+    <a href=https:&#x2F;&#x2F;rachit.pl&#x2F;files&#x2F;pubs&#x2F;dahlia.pdf>
       
-    </div>
-
-    <!--
-    <div class="publication-links">
+      Predictable Accelerator Design with Time-Sensitive Affine Types
       
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;github.com&#x2F;cucapra&#x2F;dahlia">
-          Code
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;capra.cs.cornell.edu&#x2F;dahlia">
-          Demo
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=hp_RwcnrFJg">
-          Full Talk
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="https:&#x2F;&#x2F;youtu.be&#x2F;xw9cRTIpkPc">
-          Short Talk
-        </a>
-      </span>
-      
-      <span class="publication-link">
-        <a class="unstyled-link" href="&#x2F;files&#x2F;slides&#x2F;dahlia.pdf">
-          Slides
-        </a>
-      </span>
-      
-    </div>
-    -->
+    </a>
+    
+  </span>
+  <span class="venue">
+    &bull;
+    PLDI&nbsp;’20
+    
+  </span>
+  <div class="authors">
+    
+    Rachit Nigam, 
+    
+    Sachille Atapattu, 
+    
+    Samuel Thomas, 
+    
+    Zhijing Li, 
+    
+    Ted Bauer, 
+    
+    Yuwei Ye, 
+    
+    Apurva Koti, 
+    
+    Adrian Sampson, 
+    
+    Zhiru Zhang
+    
   </div>
+  <!-- Award -->
+  
 </div>
 
   
