@@ -117,6 +117,7 @@ hr {
 }
 
 p {
+    margin-bottom: .8em;
     text-align: left;
     color: inherit;
 }
@@ -162,7 +163,7 @@ footer {
 
 /* Grid Container */
 .container {
-    padding-top: 1em;
+    padding-top: 2em;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
