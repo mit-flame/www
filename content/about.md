@@ -27,8 +27,7 @@ The clear abstraction boundary between hardware and software provided by traditi
 accelerators.
 While this boundary has enabled the principled study and design of software compilers, its absence means that accelerator
 compilation only has point solutions.
-*How can we scalable and automated compilers for accelerator design and use?*
-
+*How can we design scalable and automated compilers for accelerator design and use?*
 
 
 
