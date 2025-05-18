@@ -16,7 +16,7 @@ authors = [
 publication = "Programming Languages Design and Implementation"
 publication_short = "PLDI"
 
-pdf = "https://rachit.pl/files/pubs/filament.pdf"
+pdf = "https://people.csail.mit.edu/rachit/files/pubs/filament.pdf"
 urls = [
   { name = "Website", url = "https://filamenthdl.com" },
   { name = "Code", url = "https://github.com/cucapra/filament" },

@@ -2,7 +2,7 @@
 template = "index.html"
 +++
 
-The goal of the FLAME lab is to design principled abstractions across the programming systems stack 
+The goal of the FLAME lab is to design principled abstractions across the programming systems stack
 (languages, compilers, architectures) to enable the efficient design and use of specialized hardware.
 
 > If you are interested in joining the lab, please review the [specific instructions][prospective] before contacting us.
@@ -31,7 +31,7 @@ compilation only has point solutions.
 
 
 
-[rachit]: https://rachit.pl
+[rachit]: https://people.csail.mit.edu/rachit
 [prospective]: @/lab/prospective.md
 [filament]: https://filamentHDL.com
 [calyx]: https://calyxir.org

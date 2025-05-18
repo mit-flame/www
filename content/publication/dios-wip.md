@@ -18,7 +18,7 @@ equal_authors = [true, true]
 publication = "International Conference on Languages, Compilers, and Tools for Embedded Systems"
 publication_short = "LCTES"
 
-pdf = "https://rachit.pl/files/pubs/dios-wip.pdf"
+pdf = "https://people.csail.mit.edu/rachit/files/pubs/dios-wip.pdf"
 urls = [
  {name = "Talk", url = "https://www.youtube.com/watch?v=fDnsmRY7LOc"}
 ]

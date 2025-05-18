@@ -22,7 +22,7 @@ publication_short = "PLDI"
 image_preview = "dahlia-logo.png"
 image_alt = "Dahlia Logo"
 
-pdf = "https://rachit.pl/files/pubs/dahlia.pdf"
+pdf = "https://people.csail.mit.edu/rachit/files/pubs/dahlia.pdf"
 urls = [
   { name = "Demo", url = "https://capra.cs.cornell.edu/dahlia" },
   { name = "Short Talk", url = "https://youtu.be/xw9cRTIpkPc" },

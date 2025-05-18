@@ -15,7 +15,7 @@ How can we design new, high-level programming models for hardware generation tha
 Field Programmable Gate Arrays (FPGAs) have gained significant popularity as plug-and-play accelerators in various domains, including networking, machine learning, and language runtimes.
 How can we design large-scale FPGA-based systems that can utilize multi-node setups, integrate with existing distributing computing frameworks, and provide a straightforward end-user programming model?
 
-[rachit]: https://rachit.pl
+[rachit]: https://people.csail.mit.edu/rachit
 [prospective]: @/lab/prospective.md
 [filament]: https://filamentHDL.com
 [calyx]: https://calyxir.org
