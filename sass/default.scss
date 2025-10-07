@@ -15,6 +15,7 @@ $h3-weight: 600;
 $body-size: 16px;
 $body-lh: 1.55;
 $body-weight: 400;
+$p-after: .8em;
 
 /* CSS Reset */
 * {
@@ -117,7 +118,7 @@ hr {
 }
 
 p {
-    margin-bottom: .8em;
+    margin-bottom: $p-after;
     text-align: left;
     color: inherit;
 }
@@ -126,6 +127,7 @@ ol,
 ul {
     list-style-position: outside;
     padding-left: 1em;
+    margin-bottom: $p-after;
 }
 
 li {
@@ -271,7 +273,7 @@ footer {
 }
 
 .blurb {
-    margin-bottom: 0.8em;
+    margin-bottom: $p-after;
     display: flex;
     flex-flow: row wrap;
 }
