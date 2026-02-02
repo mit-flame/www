@@ -38,7 +38,7 @@ Calyx.
 You likely to run into problems when doing this, especially when installing things.
 Please open an [issue in the Calyx repository][calyx-issue] or ask a question the [Calyx Zulip server][calyx-zulip]!
 Good luck!
-Once you have completed the at least one challenge problem, please reach out to
+Once you have completed at least one challenge problem, please reach out to
 [Rachit](mailto:rnigam@mit.edu)!
 
 [Calyx paper]: https://people.csail.mit.edu/rachit/files/pubs/calyx.pdf
