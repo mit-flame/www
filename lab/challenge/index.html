@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Rachit Nigam">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="robots" content="noindex,nofollow">
+  
+  <title> Challenge Problems |  FLAME Lab @ MIT </title>
+  
+
+  <link rel="icon" href="/flame-logo.ico">
+
+  <link rel="stylesheet" href=https://flame.csail.mit.edu/default.css>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg==" crossorigin="anonymous"/>
+
+  <!-- Load Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://flame.csail.mit.edu/news/atom.xml">
+  
+
+</head>
+
+<body>
+<div class="nav">
+<!-- Hero -->
+<div class="hero">
+  <div class="logo" style="background-image: url('/img/flame-logo.png');"></div>
+  <div class="title">
+    <a href="/">
+      <h1><span class="highlight">FLAME</span> Lab @&nbsp;MIT</h1>
+      <h3 class="subtitle">Foundations of Languages and Machines</h3>
+    </a>
+  </div>
+</div>
+<!-- <div class="links">
+  <a href="https://github.com/mit-flame" target="_blank"><i class="fab fa-github"></i>&nbsp;Github</a><br/>
+  <a href="/lab"><i class="fad fa-flask"></i>&nbsp;Lab</a><br/>
+  <a href="/#projects"><i class="fad fa-hammer"></i>&nbsp;Projects</a><br/>
+<a href="/#publications"><i class="fad fa-scroll"></i>&nbsp;Publications</a><br/>
+</div> -->
+</div>
+
+<div class="container">
+  
+
+<div class="main-section">
+<div class="post-header">
+<h1 class="title">
+  Challenge Problems
+</h1>
+</div>
+
+<div class="post">
+<p>If you're an undergraduate or M.Eng. student at MIT interested in joining the
+lab, here are some challenge problems we'd ask you to do to see if there a
+research and technical fit.</p>
+<h2 id="matrix-multiplier-in-calyx"><a class="zola-anchor" href="#matrix-multiplier-in-calyx" aria-label="Anchor link for: matrix-multiplier-in-calyx">Matrix Multiplier in Calyx</a></h2>
+<p><a rel="external" href="https://calyxir.org">Calyx</a> is a compiler infrastructure for hardware generation; think of it as
+"LLVM for hardware generation". It provides a both software-like control flow
+operations and hardware-like structural operations to describe efficient
+circuits.</p>
+<p>For this challenge problem, you will implement matrix multiplication unit in
+Calyx.</p>
+<p><strong>Preliminary.</strong> Learn about Calyx and implement a basic design in it.</p>
+<ul>
+<li>(Optional) Read the <a rel="external" href="https://people.csail.mit.edu/rachit/files/pubs/calyx.pdf">Calyx paper</a>.</li>
+<li><a rel="external" href="https://docs.calyxir.org">Setup Calyx and follow the tutorial</a>.</li>
+<li>Implement a matrix multiplier in Calyx and test it for correctness by writing
+a test harness.</li>
+</ul>
+<p><strong>Challenge.</strong> If you are a UROP applying to the lab, you can consider these optional! If you are an M.Eng. student, you should do at least one challenge problem. Doing more problems gives us a better understanding of your skills and would help us match you to a project in the lab!</p>
+<ul>
+<li><em>Latency optimization.</em> The test harness reports a cycle count.
+Optimize the design to reduce the cycle count.
+Some options (although you are welcome to try something else!)
+<ul>
+<li>Use Calyx's <a rel="external" href="https://people.csail.mit.edu/rachit/files/pubs/piezo.pdf">static abstraction</a>.</li>
+<li>Implement a <a rel="external" href="https://www.eecs.harvard.edu/~htk/publication/1982-kung-why-systolic-architecture.pdf">systolic array</a> in Calyx</li>
+</ul>
+</li>
+<li><em>Frequency optimization.</em> The frequency of a hardware design determines how quickly the clock can tick. This information is <em>not provided</em> by the test harness.
+<ul>
+<li>Install and use <a rel="external" href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vivado.html">AMD's Vivado tool</a> (using the free HLPack version) to get frequency numbers for your Calyx design.</li>
+<li>Implement one optimization that improves the baseline frequency of the design.</li>
+</ul>
+</li>
+<li>Implement a pass using the Calyx infrastructure improves <em>some</em> performance metric: the number of resources a design uses, its latency, or its frequency.
+<ul>
+<li>The <a rel="external" href="https://docs.calyxir.org/new-pass.html">pass tutorial</a> provides and overview on how to implement new passes in Calyx.</li>
+</ul>
+</li>
+<li>Anything else you think might be cool!</li>
+</ul>
+<p>You likely to run into problems when doing this, especially when installing things.
+Please open an <a rel="external" href="https://github.com/calyxir/calyx/issues">issue in the Calyx repository</a> or ask a question the <a rel="external" href="https://calyx.zulipchat.com/">Calyx Zulip server</a>!
+Good luck!
+Once you have completed the at least one challenge problem, please reach out to
+<a href="mailto:rnigam@mit.edu">Rachit</a>!</p>
+
+</div>
+</div>
+
+
+<div class="side-section toc">
+<h2>Contents</h2>
+<ul>
+  
+  <li>
+    <a href="https://flame.csail.mit.edu/lab/challenge/#matrix-multiplier-in-calyx">Matrix Multiplier in Calyx</a>
+    
+  </li>
+  
+</ul>
+</div>
+
+
+
+
+</div>
+
+<footer>
+  &copy;&nbsp;2024 Rachit Nigam &middot; Built using <a href="https://www.getzola.org/">Zola</a>
+</footer>
+</body>
+
+</html>

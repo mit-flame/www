@@ -42,7 +42,7 @@
         <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/representing-tensor-computations/"/>
         <id>https://flame.csail.mit.edu/news/representing-tensor-computations/</id>
         
-        <content type="html" xml:base="https://flame.csail.mit.edu/news/representing-tensor-computations/">&lt;p&gt;Elam wrote about &lt;a href=&quot;https:&#x2F;&#x2F;elam.day&#x2F;post&#x2F;representing-tensor-computations&quot;&gt;Representing Tensor Computations&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://flame.csail.mit.edu/news/representing-tensor-computations/">&lt;p&gt;Elam wrote about &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;elam.day&#x2F;post&#x2F;representing-tensor-computations&quot;&gt;Representing Tensor Computations&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -62,7 +62,7 @@
         <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/pldi-25-reflections/"/>
         <id>https://flame.csail.mit.edu/news/pldi-25-reflections/</id>
         
-        <content type="html" xml:base="https://flame.csail.mit.edu/news/pldi-25-reflections/">&lt;p&gt;Rachit wrote about &lt;a href=&quot;https:&#x2F;&#x2F;people.csail.mit.edu&#x2F;rachit&#x2F;post&#x2F;pldi-2025&#x2F;&quot;&gt;Reflecting on PLDI 2025&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://flame.csail.mit.edu/news/pldi-25-reflections/">&lt;p&gt;Rachit wrote about &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;people.csail.mit.edu&#x2F;rachit&#x2F;post&#x2F;pldi-2025&#x2F;&quot;&gt;Reflecting on PLDI 2025&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -82,7 +82,7 @@
         <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/rachit-sigarch-award/"/>
         <id>https://flame.csail.mit.edu/news/rachit-sigarch-award/</id>
         
-        <content type="html" xml:base="https://flame.csail.mit.edu/news/rachit-sigarch-award/">&lt;p&gt;Rachit was awarded an honrable mention for the &lt;a href=&quot;https:&#x2F;&#x2F;www.sigarch.org&#x2F;benefit&#x2F;awards&#x2F;acm-sigarch-ieee-cs-tcca-outstanding-dissertation-award&#x2F;&quot;&gt;SIGARCH&#x2F;IEEE CS TCCA Outstanding Dissertation Award&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://flame.csail.mit.edu/news/rachit-sigarch-award/">&lt;p&gt;Rachit was awarded an honrable mention for the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.sigarch.org&#x2F;benefit&#x2F;awards&#x2F;acm-sigarch-ieee-cs-tcca-outstanding-dissertation-award&#x2F;&quot;&gt;SIGARCH&#x2F;IEEE CS TCCA Outstanding Dissertation Award&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -102,7 +102,7 @@
         <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/rachit-sigplan-award/"/>
         <id>https://flame.csail.mit.edu/news/rachit-sigplan-award/</id>
         
-        <content type="html" xml:base="https://flame.csail.mit.edu/news/rachit-sigplan-award/">&lt;p&gt;Rachit was awarded the &lt;a href=&quot;https:&#x2F;&#x2F;www.sigplan.org&#x2F;Awards&#x2F;Dissertation&#x2F;&quot;&gt;SIGPLAN John C. Reynolds Doctoral Dissertation Award&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://flame.csail.mit.edu/news/rachit-sigplan-award/">&lt;p&gt;Rachit was awarded the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.sigplan.org&#x2F;Awards&#x2F;Dissertation&#x2F;&quot;&gt;SIGPLAN John C. Reynolds Doctoral Dissertation Award&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
@@ -142,7 +142,7 @@
         <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/peizo-accept/"/>
         <id>https://flame.csail.mit.edu/news/peizo-accept/</id>
         
-        <content type="html" xml:base="https://flame.csail.mit.edu/news/peizo-accept/">&lt;p&gt;Our paper on unifying static and dynamic abstractions in &lt;a href=&quot;https:&#x2F;&#x2F;calyxir.org&quot;&gt;Calyx&lt;&#x2F;a&gt; was conditionally accepted at OOPSLA 2024.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://flame.csail.mit.edu/news/peizo-accept/">&lt;p&gt;Our paper on unifying static and dynamic abstractions in &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;calyxir.org&quot;&gt;Calyx&lt;&#x2F;a&gt; was conditionally accepted at OOPSLA 2024.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
