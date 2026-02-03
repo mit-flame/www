@@ -31,7 +31,8 @@ Please apply to the MIT graduate admissions process and list me as a reader for 
 
 ### UROPs
 
-Please drop me [an email][rachit-email] using your MIT address and tell me what got you excited about research! If you're a junior or senior student, please describe a research paper you've read and why you think I would be a good match for you.
+Attempt a problem on the [challenge problems page](./challenge.md) and drop me
+[an email][rachit-email].
 
 ### M.Eng
 
@@ -42,16 +43,31 @@ This does not need to be the final project you work on but should be a jumping o
 
 I love hearing what folks at MIT are working on! Drop me [an email][rachit-email], and we'll set up some time to chat.
 
-## Postdocs & Visitors
+## Postdocs
 
-I am generally not accepting postdoc or visitor applications.
-However, if you think we are an *exceptionally good* match, please:
-* Drop me an email with a concise description of your research and what projects you would like to pursue at FLAME.
-* Ask your advisor to email me with a letter of recommendation.
+I am generally not soliciting applications for postdocs but if you think that
+we are an *exceptionally good match*, please:
+* Drop me an email with:
+    * Two-page research statement on your PhD work and future directions.
+    * What you would like to get out of a postdoc position at FLAME.
+    * What your future career plans are.
+
+
+## Visiting Students
+
+If you already have substantial research experience and are interested in
+visiting my group, please send me an email with:
+
+* Funding available to you during your visit. If you do not have any funding
+  available, a visiting position would be challenging to set up.
+* A one-page research statement detailing your previous research projects.
+* 3-4 research papers you have read that you are excited about.
+* (Optional) A research project you would want to conduct as a visiting student.
+* Time period when you would like to visit.
 
 
 [eecs-app]: https://www.eecs.mit.edu/academics/graduate-programs/admission-process/
 [gaap]: https://oge.mit.edu/community-diversity/prospective-students/graduate-application-assistance-programs-gaap/
 [llvm]: https://llvm.org/
 [circt]: https://circt.llvm.org/
-[rachit-email]: mailto:rn@csail.mit.edu
+[rachit-email]: mailto:rnigam@mit.edu
