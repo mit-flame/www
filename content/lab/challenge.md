@@ -6,6 +6,11 @@ If you're an undergraduate or M.Eng. student at MIT interested in joining the
 lab, here are some challenge problems we'd ask you to do to see if there a
 research and technical fit.
 
+> **Note on LLM usage**: The goal of these exercises is for us to figure
+> out if you are interested in the kind of research we do in the lab.
+> We would much rather have you try to implement something and fail and talk to
+> us about it than to one-shot it using an LLM.
+
 ## Matrix Multiplier in Calyx
 
 [Calyx][] is a compiler infrastructure for hardware generation; think of it as
@@ -21,8 +26,19 @@ Calyx.
 - [Setup Calyx and follow the tutorial](https://docs.calyxir.org).
 - Implement a matrix multiplier in Calyx and test it for correctness by writing
   a test harness.
+    - You can select whatever algorithm for this you'd like but we'd recommend
+    starting with basic, triply-nested `while` loops.
+    - You should write a JSON test file, in the same way the tutorial does, and
+      make it work with your implementation.
+    - If you run into problems, the documentation page on [debugging Calyx would
+      be helpful][calyx-debug]!
 
-**Challenge.** If you are a UROP applying to the lab, you can consider these optional! If you are an M.Eng. student, you should do at least one challenge problem. Doing more problems gives us a better understanding of your skills and would help us match you to a project in the lab!
+> You are likely going to run into problems when doing this, especially when installing
+things.
+Please open an [issue in the Calyx repository][calyx-issue] or ask a question
+the [Calyx Zulip server][calyx-zulip]!
+
+**Challenge.** If you are a UROP applying to the lab, you can consider these optional! If you are an M.Eng. student, you should attempt do at least one challenge problem. Doing more problems gives us a better understanding of your skills and would help us match you to a project in the lab!
 - *Latency optimization.* The test harness reports a cycle count.
   Optimize the design to reduce the cycle count.
   Some options (although you are welcome to try something else!)
@@ -35,10 +51,7 @@ Calyx.
   - The [pass tutorial][pass] provides and overview on how to implement new passes in Calyx.
 - Anything else you think might be cool!
 
-You likely to run into problems when doing this, especially when installing things.
-Please open an [issue in the Calyx repository][calyx-issue] or ask a question the [Calyx Zulip server][calyx-zulip]!
-Good luck!
-Once you have completed at least one challenge problem, please reach out to
+After finishing up an exercise, please reach out to
 [Rachit](mailto:rnigam@mit.edu)!
 
 [Calyx paper]: https://people.csail.mit.edu/rachit/files/pubs/calyx.pdf
@@ -49,3 +62,4 @@ Once you have completed at least one challenge problem, please reach out to
 [calyx-zulip]: https://calyx.zulipchat.com/
 [Calyx]: https://calyxir.org
 [calyx-issue]: https://github.com/calyxir/calyx/issues
+[calyx-debug]: https://docs.calyxir.org/debug/index.html
