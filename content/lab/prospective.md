@@ -31,7 +31,7 @@ Please apply to the MIT graduate admissions process and list me as a reader for 
 
 ### UROPs
 
-Attempt a problem on the [challenge problems page](./challenge.md) and drop me
+Attempt a problem on the [challenge problems page](../challenge) and drop me
 [an email][rachit-email].
 
 ### M.Eng
