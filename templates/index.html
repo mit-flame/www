@@ -33,8 +33,9 @@
   </a>
 </sup>
 </h2>
+<span class="news">
 {% set news = get_section(path="news/_index.md") %}
-{% set items = 5 %}
+{% set items = 8 %}
 {% for post in news.pages | sort(attribute="date") | reverse | slice(end=items) %}
 {{ m::generate_news(post=post) }}
 {% endfor %}
@@ -44,6 +45,7 @@
     <i class="fa fa-angle-double-right"></i>
     </a>
 </div>
+</span>
 
 <div style="padding-top: 25px;"></div>
 

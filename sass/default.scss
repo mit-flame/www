@@ -191,6 +191,10 @@ footer {
     padding-top: 0;
 }
 
+.news {
+    font-size: .87em;
+}
+
 
 /* Top Title Bar */
 .hero {
@@ -269,7 +273,7 @@ footer {
 
 // Date styling
 .date {
-    font-weight: 300;
+    //font-weight: 400;
     text-align: left;
     color: $muted;
 }
@@ -287,7 +291,7 @@ footer {
 
 .blurb>.description {
     vertical-align: top;
-    margin-left: 1em;
+    margin-left: .5em;
     flex: 1 1;
 }
 
