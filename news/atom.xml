@@ -4,8 +4,28 @@
     <link rel="self" type="application/atom+xml" href="https://flame.csail.mit.edu/news/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-05-01T00:00:00+00:00</updated>
+    <updated>2026-05-12T00:00:00+00:00</updated>
     <id>https://flame.csail.mit.edu/news/atom.xml</id>
+    <entry xml:lang="en">
+        <title></title>
+        <published>2026-05-12T00:00:00+00:00</published>
+        <updated>2026-05-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Rachit Nigam
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/rachit-cornell-diss/"/>
+        <id>https://flame.csail.mit.edu/news/rachit-cornell-diss/</id>
+        
+        <content type="html" xml:base="https://flame.csail.mit.edu/news/rachit-cornell-diss/">&lt;p&gt;Rachit was awarded the Cornell CS Outstanding Dissertation award.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title></title>
         <published>2026-05-01T00:00:00+00:00</published>
@@ -88,26 +108,6 @@
     </entry>
     <entry xml:lang="en">
         <title></title>
-        <published>2025-06-24T00:00:00+00:00</published>
-        <updated>2025-06-24T00:00:00+00:00</updated>
-        
-        <author>
-          <name>
-            
-              Rachit Nigam
-            
-          </name>
-        </author>
-        
-        <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/rachit-sigarch-award/"/>
-        <id>https://flame.csail.mit.edu/news/rachit-sigarch-award/</id>
-        
-        <content type="html" xml:base="https://flame.csail.mit.edu/news/rachit-sigarch-award/">&lt;p&gt;Rachit was awarded an honrable mention for the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.sigarch.org&#x2F;benefit&#x2F;awards&#x2F;acm-sigarch-ieee-cs-tcca-outstanding-dissertation-award&#x2F;&quot;&gt;SIGARCH&#x2F;IEEE CS TCCA Outstanding Dissertation Award&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-</content>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title></title>
         <published>2025-06-19T00:00:00+00:00</published>
         <updated>2025-06-19T00:00:00+00:00</updated>
         
@@ -122,7 +122,7 @@
         <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/rachit-sigplan-award/"/>
         <id>https://flame.csail.mit.edu/news/rachit-sigplan-award/</id>
         
-        <content type="html" xml:base="https://flame.csail.mit.edu/news/rachit-sigplan-award/">&lt;p&gt;Rachit was awarded the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.sigplan.org&#x2F;Awards&#x2F;Dissertation&#x2F;&quot;&gt;SIGPLAN John C. Reynolds Doctoral Dissertation Award&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://flame.csail.mit.edu/news/rachit-sigplan-award/">&lt;p&gt;Rachit was awarded the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.sigplan.org&#x2F;Awards&#x2F;Dissertation&#x2F;&quot;&gt;SIGPLAN Doctoral Dissertation Award&lt;&#x2F;a&gt; and an honrable mention for the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.sigarch.org&#x2F;benefit&#x2F;awards&#x2F;acm-sigarch-ieee-cs-tcca-outstanding-dissertation-award&#x2F;&quot;&gt;SIGARCH Outstanding Dissertation Award&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
