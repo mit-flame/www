@@ -19,7 +19,7 @@ authors = [
 publication = "Architectural Support for Programming Languages and Operating Systems"
 publication_short = "ASPLOS"
 
-pdf = "/files/pubs/lilac.pdf"
+pdf = "https://people.csail.mit.edu/rachit/files/pubs/lilac.pdf"
 urls = [
   { name = "Website", url = "https://filamenthdl.com" },
   { name = "Code", url = "https://github.com/cucapra/filament" },

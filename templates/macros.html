@@ -69,7 +69,7 @@
 </div>
 {% endmacro publication %}
 
-{% macro person(name, info) %}
+{% macro person(info) %}
 <div class="person">
   {% if info.img %}
   <img src="img/{{info.img}}" height="100px"/>
@@ -80,12 +80,25 @@
   <div class="name">
     <b>
     {% if info.link %}
-    <a href="{{ info.link }}"}>{{ name }}</a>
+    <a href="{{ info.link }}">{{ info.name }}</a>
     {% else %}
-    {{ name }}
+    {{ info.name }}
     {% endif %}
     </b>
   </div>
   <div class="role">{{ info.role  }}</div>
 </div>
 {% endmacro person %}
+
+{% macro alum(info) %}
+<div class="alum">
+  {% if info.role == "MEng" %}
+    {% set degree = "M.Eng." %}
+  {% else %}
+    {% set degree = info.role %}
+  {% endif %}
+  <b>{{ info.name }}</b>
+  <span class="alumni-year">({{ degree }} {{ info.grad_year }})</span>{% if info.thesis %}: {% if info.thesis_pdf %}<a href="{{ get_url(path='files/' ~ info.thesis_pdf) }}">{{ info.thesis }}</a>{% else %}{{ info.thesis }}{% endif %}{% endif %}.
+    Now at <i>{{ info.where }}</i>.
+</div>
+{% endmacro alum %}

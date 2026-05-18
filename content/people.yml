@@ -1,18 +1,23 @@
-Rachit Nigam:
+- name: Rachit Nigam
   role: Faculty
   link: https://rachitnigam.com
   img: "rnigam.png"
 
-Elam Day-Friedland:
+- name: Elam Day-Friedland
   role: PhD
   link: https://elam.day
   img: "elamdf.png"
 
-Carolyn Zech:
+- name: Carolyn Zech
   role: PhD
   link: https://carolynzech.com
   img: "czech.jpg"
 
-Ayana Alemayehu:
-  role: M.Eng.
-  img: "ayana.JPG"
+# Alumni records use this schema:
+- name: Ayana Alemayehu
+  role: MEng # PhD, MEng, or Undergrad
+  alum: yes
+  grad_year: 2026
+  thesis: Evaluating Message Passing Abstractions for High-Level Hardware Design
+  thesis_pdf: ayana-thesis.pdf
+  where: Tesla

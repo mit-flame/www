@@ -12,10 +12,33 @@
   <h2>People</h2>
   {% set people = load_data(path="content/people.yml", format="yaml") %}
   <div class="people">
-    {% for name, info in people %}
-      {{ m::person(name=name, info=info) }}
+    {% for person in people %}
+      {% if not person.alum %}
+      {{ m::person(info=person) }}
+      {% endif %}
     {% endfor %}
   </div>
+
+  {% set_global has_alumni = false %}
+  {% for person in people %}
+    {% if person.alum %}
+      {% set_global has_alumni = true %}
+    {% endif %}
+  {% endfor %}
+  {% if has_alumni %}
+  <h3>Alumni</h3>
+  <div class="alumni">
+    {% for person in people | filter(attribute="alum", value="yes") | filter(attribute="role", value="PhD") | sort(attribute="grad_year") | reverse %}
+      {{ m::alum(info=person) }}
+    {% endfor %}
+    {% for person in people | filter(attribute="alum", value="yes") | filter(attribute="role", value="MEng") | sort(attribute="grad_year") | reverse %}
+      {{ m::alum(info=person) }}
+    {% endfor %}
+    {% for person in people | filter(attribute="alum", value="yes") | filter(attribute="role", value="Undergrad") | sort(attribute="grad_year") | reverse %}
+      {{ m::alum(info=person) }}
+    {% endfor %}
+  </div>
+  {% endif %}
 
   {{ m::anchor_heading(content="Publications") }}
   {% set news = get_section(path="publication/_index.md") %}

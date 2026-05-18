@@ -271,6 +271,17 @@ footer {
     }
 }
 
+.alumni {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+    margin-bottom: $p-after;
+
+    .alumni-year {
+        color: $muted;
+    }
+}
+
 // Date styling
 .date {
     //font-weight: 400;
