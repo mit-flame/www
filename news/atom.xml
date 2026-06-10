@@ -4,8 +4,28 @@
     <link rel="self" type="application/atom+xml" href="https://flame.csail.mit.edu/news/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-05-12T00:00:00+00:00</updated>
+    <updated>2026-06-10T00:00:00+00:00</updated>
     <id>https://flame.csail.mit.edu/news/atom.xml</id>
+    <entry xml:lang="en">
+        <title></title>
+        <published>2026-06-10T00:00:00+00:00</published>
+        <updated>2026-06-10T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Rachit Nigam
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/rachit-acm-diss/"/>
+        <id>https://flame.csail.mit.edu/news/rachit-acm-diss/</id>
+        
+        <content type="html" xml:base="https://flame.csail.mit.edu/news/rachit-acm-diss/">&lt;p&gt;Rachit was awarded an honorable mention for the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;awards.acm.org&#x2F;award-recipients&#x2F;nigam_8608737#146&quot;&gt;ACM Doctoral Dissertation Award&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title></title>
         <published>2026-05-12T00:00:00+00:00</published>
