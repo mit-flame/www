@@ -3,13 +3,14 @@ title = "Challenge Problems"
 +++
 
 If you're an undergraduate or M.Eng. student at MIT interested in joining the
-lab, here are some challenge problems we'd ask you to do to see if there a
-research and technical fit.
+lab, here are some challenge problems.
+The goal for these exercises is to give you a flavor the kind of work we do in
+the lab and see if there is a technical fit.
+Given this, we recommend that *you avoid using an LLM* to solve these problems.
+If you do not have experience with these domains but are excited to learn
+about them and want to use an LLM in the learning process, we recommend using
+[this AGENTS.md file][agents].
 
-> **Note on LLM usage**: The goal of these exercises is for us to figure
-> out if you are interested in the kind of research we do in the lab.
-> We would much rather have you try to implement something and fail and talk to
-> us about it than to one-shot it using an LLM.
 
 ## Matrix Multiplier in Calyx
 
@@ -38,7 +39,9 @@ things.
 Please open an [issue in the Calyx repository][calyx-issue] or ask a question
 the [Calyx Zulip server][calyx-zulip]!
 
-**Challenge.** If you are a UROP applying to the lab, you can consider these optional! If you are an M.Eng. student, you should attempt do at least one challenge problem. Doing more problems gives us a better understanding of your skills and would help us match you to a project in the lab!
+**Stretch Goal.** If you are a UROP applying to the lab, you can consider these optional!
+If you are an M.Eng. student, you should attempt do at least one challenge problem.
+Doing more problems gives us a better understanding of your skills and would help us match you to a project in the lab!
 - *Latency optimization.* The test harness reports a cycle count.
   Optimize the design to reduce the cycle count.
   Some options (although you are welcome to try something else!)
@@ -50,6 +53,26 @@ the [Calyx Zulip server][calyx-zulip]!
 - Implement a pass using the Calyx infrastructure improves *some* performance metric: the number of resources a design uses, its latency, or its frequency.
   - The [pass tutorial][pass] provides and overview on how to implement new passes in Calyx.
 - Anything else you think might be cool!
+
+## Optimizing Mandelbrot
+
+Optimize a CPU implementation of Mandelbrot set generation using SIMD
+programming.
+Use [lab 1][xcel-compute-1] from the [accelerated computing
+course][xcel-compute] as your starting point and optimize the `mandelbrot.cpp`
+file.
+
+**Baseline.** As a baseline result, we are able to get about a 10x improvement
+on an Apple M4 Air using just the ARM Neon SIMD instructions.
+Attempt to get your optimized implementation in that range.
+
+**Challenge.**
+Use other parallelism techniques such as multi-threading to optimize your
+design even more.
+The base image in the starter code is too small to see results with these
+techniques so we recommend bumping the image size and the number of iterations
+for each point.
+
 
 After finishing up an exercise, please reach out to
 [Rachit](mailto:rnigam@mit.edu)!
@@ -63,3 +86,6 @@ After finishing up an exercise, please reach out to
 [Calyx]: https://calyxir.org
 [calyx-issue]: https://github.com/calyxir/calyx/issues
 [calyx-debug]: https://docs.calyxir.org/debug/index.html
+[agents]: https://gist.github.com/1cg/a6c6f2276a1fe5ee172282580a44a7ac
+[xcel-compute]: https://accelerated-computing.academy/fall25/
+[xcel-compute-1]: https://accelerated-computing.academy/fall25/labs/lab1/
