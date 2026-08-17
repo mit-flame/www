@@ -60,14 +60,13 @@
 
 <div class="post">
 <p>If you're an undergraduate or M.Eng. student at MIT interested in joining the
-lab, here are some challenge problems we'd ask you to do to see if there a
-research and technical fit.</p>
-<blockquote>
-<p><strong>Note on LLM usage</strong>: The goal of these exercises is for us to figure
-out if you are interested in the kind of research we do in the lab.
-We would much rather have you try to implement something and fail and talk to
-us about it than to one-shot it using an LLM.</p>
-</blockquote>
+lab, here are some challenge problems.
+The goal for these exercises is to give you a flavor the kind of work we do in
+the lab and see if there is a technical fit.
+Given this, we recommend that <em>you avoid using an LLM</em> to solve these problems.
+If you do not have experience with these domains but are excited to learn
+about them and want to use an LLM in the learning process, we recommend using
+<a rel="external" href="https://gist.github.com/1cg/a6c6f2276a1fe5ee172282580a44a7ac">this AGENTS.md file</a>.</p>
 <h2 id="matrix-multiplier-in-calyx"><a class="zola-anchor" href="#matrix-multiplier-in-calyx" aria-label="Anchor link for: matrix-multiplier-in-calyx">Matrix Multiplier in Calyx</a></h2>
 <p><a rel="external" href="https://calyxir.org">Calyx</a> is a compiler infrastructure for hardware generation; think of it as
 "LLVM for hardware generation". It provides a both software-like control flow
@@ -97,7 +96,9 @@ things.
 Please open an <a rel="external" href="https://github.com/calyxir/calyx/issues">issue in the Calyx repository</a> or ask a question
 the <a rel="external" href="https://calyx.zulipchat.com/">Calyx Zulip server</a>!</p>
 </blockquote>
-<p><strong>Challenge.</strong> If you are a UROP applying to the lab, you can consider these optional! If you are an M.Eng. student, you should attempt do at least one challenge problem. Doing more problems gives us a better understanding of your skills and would help us match you to a project in the lab!</p>
+<p><strong>Stretch Goal.</strong> If you are a UROP applying to the lab, you can consider these optional!
+If you are an M.Eng. student, you should attempt do at least one challenge problem.
+Doing more problems gives us a better understanding of your skills and would help us match you to a project in the lab!</p>
 <ul>
 <li><em>Latency optimization.</em> The test harness reports a cycle count.
 Optimize the design to reduce the cycle count.
@@ -120,6 +121,21 @@ Some options (although you are welcome to try something else!)
 </li>
 <li>Anything else you think might be cool!</li>
 </ul>
+<h2 id="optimizing-mandelbrot"><a class="zola-anchor" href="#optimizing-mandelbrot" aria-label="Anchor link for: optimizing-mandelbrot">Optimizing Mandelbrot</a></h2>
+<p>Optimize a CPU implementation of Mandelbrot set generation using SIMD
+programming.
+Use <a rel="external" href="https://accelerated-computing.academy/fall25/labs/lab1/">lab 1</a> from the <a rel="external" href="https://accelerated-computing.academy/fall25/">accelerated computing
+course</a> as your starting point and optimize the <code>mandelbrot.cpp</code>
+file.</p>
+<p><strong>Baseline.</strong> As a baseline result, we are able to get about a 10x improvement
+on an Apple M4 Air using just the ARM Neon SIMD instructions.
+Attempt to get your optimized implementation in that range.</p>
+<p><strong>Challenge.</strong>
+Use other parallelism techniques such as multi-threading to optimize your
+design even more.
+The base image in the starter code is too small to see results with these
+techniques so we recommend bumping the image size and the number of iterations
+for each point.</p>
 <p>After finishing up an exercise, please reach out to
 <a href="mailto:rnigam@mit.edu">Rachit</a>!</p>
 
@@ -133,6 +149,11 @@ Some options (although you are welcome to try something else!)
   
   <li>
     <a href="https://flame.csail.mit.edu/lab/challenge/#matrix-multiplier-in-calyx">Matrix Multiplier in Calyx</a>
+    
+  </li>
+  
+  <li>
+    <a href="https://flame.csail.mit.edu/lab/challenge/#optimizing-mandelbrot">Optimizing Mandelbrot</a>
     
   </li>
   
