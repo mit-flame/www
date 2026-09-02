@@ -13,6 +13,9 @@
   link: https://carolynzech.com
   img: "czech.jpg"
 
+- name: Christine Guo
+  role: PhD
+
 # Alumni records use this schema:
 - name: Ayana Alemayehu
   role: MEng # PhD, MEng, or Undergrad
