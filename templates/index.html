@@ -11,9 +11,18 @@
 
   <h2>People</h2>
   {% set people = load_data(path="content/people.yml", format="yaml") %}
+  {% set role_order = ["Faculty", "PhD", "MEng", "UROP"] %}
   <div class="people">
+    {% for role in role_order %}
+      {% for person in people | filter(attribute="role", value=role) %}
+        {% if not person.alum %}
+        {{ m::person(info=person) }}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    {# Anyone with a role outside role_order still shows up, at the end. #}
     {% for person in people %}
-      {% if not person.alum %}
+      {% if not person.alum and person.role not in role_order %}
       {{ m::person(info=person) }}
       {% endif %}
     {% endfor %}
@@ -32,6 +41,9 @@
       {{ m::alum(info=person) }}
     {% endfor %}
     {% for person in people | filter(attribute="alum", value="yes") | filter(attribute="role", value="MEng") | sort(attribute="grad_year") | reverse %}
+      {{ m::alum(info=person) }}
+    {% endfor %}
+    {% for person in people | filter(attribute="alum", value="yes") | filter(attribute="role", value="UROP") | sort(attribute="grad_year") | reverse %}
       {{ m::alum(info=person) }}
     {% endfor %}
     {% for person in people | filter(attribute="alum", value="yes") | filter(attribute="role", value="Undergrad") | sort(attribute="grad_year") | reverse %}
