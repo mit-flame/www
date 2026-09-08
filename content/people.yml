@@ -16,6 +16,11 @@
 - name: Christine Guo
   role: PhD
 
+- name: Liam Hanrahan
+  role: Undergrad
+  link: https://outercloud.dev
+  img: "liamh.jpg"
+
 # Alumni records use this schema:
 - name: Ayana Alemayehu
   role: MEng # Faculty, PhD, MEng, or Undergrad
