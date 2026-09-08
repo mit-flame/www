@@ -18,7 +18,7 @@
 
 # Alumni records use this schema:
 - name: Ayana Alemayehu
-  role: MEng # PhD, MEng, UROP, or Undergrad
+  role: MEng # Faculty, PhD, MEng, or Undergrad
   alum: yes
   grad_year: 2026
   thesis: Evaluating Message Passing Abstractions for High-Level Hardware Design
