@@ -68,6 +68,26 @@
     </entry>
     <entry xml:lang="en">
         <title></title>
+        <published>2026-05-01T00:00:00+00:00</published>
+        <updated>2026-05-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Rachit Nigam
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://flame.csail.mit.edu/news/christine-pton-award/"/>
+        <id>https://flame.csail.mit.edu/news/christine-pton-award/</id>
+        
+        <content type="html" xml:base="https://flame.csail.mit.edu/news/christine-pton-award/">&lt;p&gt;Christine graduated from Princeton University and received the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;ece.princeton.edu&#x2F;news&#x2F;90-graduating-seniors-celebrated-class-day-2026&quot;&gt;Charles Ira Young Memorial Tablet &amp;amp; Medal&lt;&#x2F;a&gt;!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title></title>
         <published>2025-11-25T00:00:00+00:00</published>
         <updated>2025-11-25T00:00:00+00:00</updated>
         
