@@ -1,51 +1,57 @@
 {% extends "base.html" %}
-{% import "macros.html" as m %}
 
 {% block content %}
 <!-- About  -->
 <div class="main-section">
   <div class="about">
-    {% set page = get_page(path="about.md") %}
-    {{ page.content | safe }}
+    {% set about = get_page(path="about.md") %}
+    {{ about.content | safe }}
   </div>
 
   <h2>People</h2>
   {% set people = load_data(path="content/people.yml", format="yaml") %}
+  {# Roles are displayed in this order; anyone with another role is listed last. #}
+  {% set role_order = ["Faculty", "PhD", "MEng", "Undergrad"] %}
+  {% set current = [p for p in people if not (p?.alum or false)] %}
+  {% set alumni = [p for p in people if p?.alum or false] %}
   <div class="people">
-    {% for person in people %}
-      {% if not person.alum %}
-      {{ m::person(info=person) }}
+    {% for role in role_order %}
+      {% for person in current %}
+        {% if person.role == role %}
+        {{<flame.person info={person} />}}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    {% for person in current %}
+      {% if person.role not in role_order %}
+      {{<flame.person info={person} />}}
       {% endif %}
     {% endfor %}
   </div>
 
-  {% set_global has_alumni = false %}
-  {% for person in people %}
-    {% if person.alum %}
-      {% set_global has_alumni = true %}
-    {% endif %}
-  {% endfor %}
-  {% if has_alumni %}
+  {% if alumni | length > 0 %}
   <h3>Alumni</h3>
   <div class="alumni">
-    {% for person in people | filter(attribute="alum", value="yes") | filter(attribute="role", value="PhD") | sort(attribute="grad_year") | reverse %}
-      {{ m::alum(info=person) }}
+    {% for role in role_order %}
+      {% set group = [p for p in alumni if p.role == role] | sort(attribute="grad_year") | reverse %}
+      {% for person in group %}
+      {{<flame.alum info={person} />}}
+      {% endfor %}
     {% endfor %}
-    {% for person in people | filter(attribute="alum", value="yes") | filter(attribute="role", value="MEng") | sort(attribute="grad_year") | reverse %}
-      {{ m::alum(info=person) }}
-    {% endfor %}
-    {% for person in people | filter(attribute="alum", value="yes") | filter(attribute="role", value="Undergrad") | sort(attribute="grad_year") | reverse %}
-      {{ m::alum(info=person) }}
+    {% set rest = [p for p in alumni if p.role not in role_order] | sort(attribute="grad_year") | reverse %}
+    {% for person in rest %}
+    {{<flame.alum info={person} />}}
     {% endfor %}
   </div>
   {% endif %}
 
-  {{ m::anchor_heading(content="Publications") }}
-  {% set news = get_section(path="publication/_index.md") %}
+  {{<flame.anchor_heading content="Publications" />}}
+  {% set pubs = get_section(path="publication/_index.md") %}
 
   <!-- Conference Publications -->
-  {% for pub in news.pages | filter(attribute="extra.type", value="conf") | sort(attribute="date") | reverse %}
-  {{ m::publication(pub=pub) }}
+  {% set conf_pubs = [p for p in pubs.pages if p.extra?.type == "conf"] | sort(attribute="date") | reverse %}
+  {% for pub in conf_pubs %}
+  {{<flame.publication pub={pub} />}}
   {% endfor %}
 </div>
 
@@ -59,8 +65,9 @@
 <span class="news">
 {% set news = get_section(path="news/_index.md") %}
 {% set items = 8 %}
-{% for post in news.pages | sort(attribute="date") | reverse | slice(end=items) %}
-{{ m::generate_news(post=post) }}
+{% set recent = news.pages | sort(attribute="date") | reverse %}
+{% for post in recent[:items] %}
+{{<flame.news post={post} />}}
 {% endfor %}
 <div class="more">
     <a href="/news">
@@ -79,8 +86,8 @@
   <li>
   <a href="https://github.com/mit-flame" target="_blank">Github</a>
   </li>
-  {% for page in lab_pages.pages %}
-  <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+  {% for lab_page in lab_pages.pages %}
+  <li><a href="{{ lab_page.permalink }}">{{ lab_page.title }}</a></li>
   {% endfor %}
   <li><a href="https://private.flame.csail.mit.edu" target="_blank">Internal</a></li>
 </ul>

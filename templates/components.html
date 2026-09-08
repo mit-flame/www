@@ -1,77 +1,58 @@
 {# Heading with anchor link #}
-{% macro anchor_heading(content, size="2") %}
+{% component flame.anchor_heading(content: string, size = "2") %}
 <h{{size}} id="{{ content | slugify }}">
   {{ content }}
 </h{{size}}>
-{% endmacro anchor_heading %}
-
-{# Styling for Posts #}
-{% macro generate_post(post) %}
-<div class="blurb">
-  <div class="date">{{ post.date | date(format="%b ’%y") }}</div>
-  <div class="description">
-    {% if post.extra.external %}
-    <a href="{{ post.extra.external | safe }}">
-      {% else %}
-      <a href="{{ post.permalink | safe }}">
-        {% endif %}
-        {{ post.title | safe }}
-      </a><br />
-      <div class="post-tease">
-        {{ post.extra.summary }}
-      </div>
-  </div>
-</div>
-{% endmacro post %}
+{% endcomponent flame.anchor_heading %}
 
 {# Styling for News items #}
-{% macro generate_news(post) %}
+{% component flame.news(post: map) %}
 <div class="blurb">
   <div class="date">{{ post.date | date(format="%b ’%y") }}</div>
   <div class="description">
     {{ post.content | safe }}
   </div>
 </div>
-{% endmacro post %}
+{% endcomponent flame.news %}
 
 {# Styling for a publication item #}
-{% macro publication(pub) %}
+{% component flame.publication(pub: map) %}
 <div class="publication">
   <span class="title">
-    {% if pub.extra.pdf %}
+    {% if pub.extra?.pdf %}
     <a href={{ pub.extra.pdf }}>
       {% endif %}
       {{ pub.title | safe }}
-      {% if pub.extra.pdf %}
+      {% if pub.extra?.pdf %}
     </a>
     {% endif %}
   </span>
   <span class="venue">
     &bull;
-    {% if not pub.extra.publication_short %}
+    {% if not pub.extra?.publication_short %}
     <i>Draft</i>
     {% else %}
     {{- pub.extra.publication_short -}}&nbsp;{{ pub.date | date(format="’%y") }}
     {% endif %}
   </span>
   <div class="authors">
-    {% for name in pub.extra.authors %}
+    {% for name in pub.extra?.authors or [] %}
     {{ name }}{% if not loop.last %}, {% endif %}
     {% endfor %}
   </div>
   <!-- Award -->
-  {% if pub.extra.award %}
+  {% if pub.extra?.award %}
   <div class="award">
     <i class="fa fa-trophy"></i>
     <b>{{ pub.extra.award }}</b>
   </div>
   {% endif %}
 </div>
-{% endmacro publication %}
+{% endcomponent flame.publication %}
 
-{% macro person(info) %}
+{% component flame.person(info: map) %}
 <div class="person">
-  {% if info.img %}
+  {% if info?.img %}
   <img src="img/{{info.img}}" height="100px"/>
   {% else %}
   <img class="dummy" src="img/flame-logo.png" height="100px"/>
@@ -79,7 +60,7 @@
 
   <div class="name">
     <b>
-    {% if info.link %}
+    {% if info?.link %}
     <a href="{{ info.link }}">{{ info.name }}</a>
     {% else %}
     {{ info.name }}
@@ -88,17 +69,13 @@
   </div>
   <div class="role">{{ info.role  }}</div>
 </div>
-{% endmacro person %}
+{% endcomponent flame.person %}
 
-{% macro alum(info) %}
+{% component flame.alum(info: map) %}
 <div class="alum">
-  {% if info.role == "MEng" %}
-    {% set degree = "M.Eng." %}
-  {% else %}
-    {% set degree = info.role %}
-  {% endif %}
+  {% set degree = "M.Eng." if info.role == "MEng" else info.role %}
   <b>{{ info.name }}</b>
-  <span class="alumni-year">({{ degree }} {{ info.grad_year }})</span>{% if info.thesis %}: {% if info.thesis_pdf %}<a href="{{ get_url(path='files/' ~ info.thesis_pdf) }}">{{ info.thesis }}</a>{% else %}{{ info.thesis }}{% endif %}{% endif %}.
+  <span class="alumni-year">({{ degree }} {{ info.grad_year }})</span>{% if info?.thesis %}: {% if info?.thesis_pdf %}<a href="{{ get_url(path='files/' ~ info.thesis_pdf) }}">{{ info.thesis }}</a>{% else %}{{ info.thesis }}{% endif %}{% endif %}.
     Now at <i>{{ info.where }}</i>.
 </div>
-{% endmacro alum %}
+{% endcomponent flame.alum %}
