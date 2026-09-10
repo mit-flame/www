@@ -21,6 +21,11 @@
   link: https://outercloud.dev
   img: "liamh.jpg"
 
+- name: Armaan Gomes
+  role: Undergrad
+  link: https://armaangomes.com/
+  img: "acgo.jpg"
+
 # Alumni records use this schema:
 - name: Ayana Alemayehu
   role: MEng # Faculty, PhD, MEng, or Undergrad
