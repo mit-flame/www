@@ -26,6 +26,11 @@
   link: https://armaangomes.com/
   img: "acgo.jpg"
 
+- name: Charles Reischer
+  role: Undergrad
+  link: https://charlcoal.dev
+  img: "charleyr.jpg"
+
 # Alumni records use this schema:
 - name: Ayana Alemayehu
   role: MEng # Faculty, PhD, MEng, or Undergrad
